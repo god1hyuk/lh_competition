@@ -4,9 +4,180 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LH 설계공모</title>
+    <link rel="stylesheet" href="asset/css/style.css" />
 </head>
 <body>
-    <h1>Hello World</h1>
+    <!-- 메인 페이지 -->
+    <div class="main_page">
+        <!-- 메인 페이지 헤더 -->
+        <header>
+            <!-- 메인 페이지 메뉴 -->
+            <nav>
+                <div class="nav_left">
+                    <div class="logo">
+                        <a href="">
+                            <img src="asset/images/logo/main_logo.png" alt="LH_로고" />
+                        </a>
+                    </div>
+                    <ul class="sub_menu">
+                        <li>
+                            <a href="">
+                                <img src="asset/images/icon/facebook_icon.png" alt="페이스북_아이콘" />
+                            </a>
+                        </li>
+                        <li class="language">
+                            <a href="">
+                                ENG
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav_right">
+                    <ul class="top_menu">
+                        <li>
+                            <a href="">
+                                Login
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                Join
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="asset/images/icon/myPage_icon.png" alt="마이페이지버튼_아이콘" />
+                                My Page
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="main_menu">
+                        <li>
+                            <a href="">
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                Competition
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                Winner
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                News
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- <div class="sPagination">
+                        <div class="active"></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div> -->
+                </div>
+            </nav>
+            <!-- 메인 페이지 공모 정보박스 -->
+            <div class="compt_infoBox">
+                <!-- 메인 페이지 공모 마감일정 -->
+                <div class="d_day">
+                    <ul class="dDay_list">
+                        <li>
+                            <div class="dDay_title">
+                                <h3>D-03</h3>
+                                <span><strong>공공분양</strong>2021-05-30</span>
+                            </div>
+                            <p>국토지리정보원 및 익산송학 공공청사 복합개발사업 설계공모</p>
+                        </li>
+                        <li>
+                            <div class="dDay_title">
+                                <h3>D-15</h3>
+                                <span><strong>행복주택</strong>2021-05-30</span>
+                            </div>
+                            <p>한양대 ERICA 캠퍼스 혁신파크 HUB동 건축설계용역 현상설계 공모</p>
+                        </li>
+                        <li>
+                            <div class="dDay_title">
+                                <h3>D-03</h3>
+                                <span><strong>공공분양</strong>2021-05-30</span>
+                            </div>
+                            <p>국토지리정보원 및 익산송학 공공청사 복합개발사업 설계공모</p>
+                        </li>
+                    </ul>
+                    <button>
+                        <img src="asset/images/icon/calendar_icon.png" alt="일정버튼_아이콘" />
+                    </button>
+                </div>
+                <!-- 메인 페이지 공모 우승팀 -->
+                <div class="winner">
+                    <a href="">
+                        <h2>종로창신 노후공공청사 복합 개발사업 및 안양석수 행복주택 설계공모</h2>
+                        <div class="winner_bottom">
+                            <p>Winner<span> / ㈜대경건축사무소</span></p>
+                            <div class="goWinner_btn"></div>
+                        </div>
+                    </a>
+                    <button>
+                        <img src="asset/images/icon/competitionView_icon.png" alt="공모바로가기버튼_아이콘" />
+                        Competition View
+                        <img src="asset/images/icon/buttonArrow_white.png" alt="화살표_아이콘" />
+                    </button>
+                </div>
+            </div>
+        </header>
+    
+        <!-- 메인 페이지 슬라이더 -->
+        <div class="slider_container">
+            <ul class="slider_wrapper">
+                <li class="slider_item 0" data-value="0">
+                    <img src="asset/images/main_slider0.jpg" alt="메인슬라이더_이미지1" />
+                </li>
+                <li class="slider_item 1" data-value="1">
+                    <img src="asset/images/main_slider1.jpg" alt="메인슬라이더_이미지2" />
+                </li>
+                <li class="slider_item 2" data-value="2">
+                    <img src="asset/images/main_slider2.jpg" alt="메인슬라이더_이미지3" />
+                </li>
+                <li class="slider_item 3" data-value="3">
+                    <img src="asset/images/main_slider3.jpg" alt="메인슬라이더_이미지4" />
+                </li>
+                <li class="slider_item 4 " data-value="4">
+                    <img src="asset/images/main_slider4.jpg" alt="메인슬라이더_이미지5" />
+                </li>
+            </ul>
+            <div class="sliderBtn">
+                <button id="slidePrev">
+                    <img src="asset/images/icon/slidePrev_icon.png" alt="이전슬라이드" />
+                </button>
+                <button id="slideNext">
+                    <img src="asset/images/icon/slideNext_icon.png" alt="다음슬라이드" />
+                </button>
+            </div>
+            <div class="sPagination">
+                <div class="active"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <!-- 아카이빙 -->
+        <div class="archiving">
+            <h1>ARCHIVING</h1>
+            <button class="more_btn">
+                MORE
+                <img src="asset/images/icon/moreBtn_icon.png" alt="더보기버튼_아이콘" />
+            </button>
+        </div>
+    </div>
+
+    <script src="asset/js/main.js"></script>
 </body>
 </html>
