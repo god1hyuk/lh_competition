@@ -3,8 +3,8 @@
     padding: 0;
 }
 html, body {
-    width: 100vw !important;
-    overflow-x: hidden;
+    width: 100vw;
+    /* overflow-x: hidden; */
 }
 li {
     list-style: none;
@@ -266,7 +266,8 @@ button:hover {
     position: absolute;
     bottom: 0;
     bottom: -7.1992vw;
-    left: 4.5717vw;
+    /* left: 4.5717vw; */
+    left: 5.5vw;
     color: #fff;
 }
 /* 메인 페이지 공모 마감일정 */
