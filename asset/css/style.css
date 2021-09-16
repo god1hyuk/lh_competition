@@ -139,8 +139,13 @@ button:hover {
 }
 
 /* 메인 페이지 */
+.main_page {
+    width: 100vw;
+    max-width: 100%;
+}
 .main_page header {
     position: relative;
+    /* width: 27.8508vw; */
     width: 26.9574vw;
     height: 50.9196vw;
     z-index: 1;
@@ -264,8 +269,8 @@ button:hover {
 /* 메인 페이지 공모 마감일정 */
 .main_page .compt_infoBox .d_day {
     position: relative;
-    width: 22.3857vw;
-    /* width: 22.6484vw; */
+    /* width: 22.3857vw; */
+    width: 22.6484vw;
     padding-top: 3.6784vw;
     background: #232937;
     border-bottom: 5.2549vw solid #232937;
@@ -400,7 +405,8 @@ button:hover {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
+    max-width: 100%;
     height: 50.9196vw;
     overflow: hidden;
     z-index: 0;
@@ -415,16 +421,16 @@ button:hover {
 }
 .main_page .slider_item {
     transform: translateY(11.0878vw);
-    /* width: 72.1492vw;
-    height: 50.9196vw; */
+    width: 72.1492vw;
     font-size: 100px;
     text-align: right;
     margin-left: 14.0305vw;
+    /* hey */
     /* background: pink; */
 }
 .main_page .slider_item img {
     /* display: none; */
-    width: 72.1492vw;
+    width: 100%;
 }
 .main_page .sliderBtn {
     display: flex;
@@ -576,6 +582,8 @@ button:hover {
 /* 푸터 */
 footer {
     position: relative;
+    width: 100vw;
+    max-width: 100%;
     font-size: 0.7882vw;
     padding: 35px 0 62px;
     background: #232937;
