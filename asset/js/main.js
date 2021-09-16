@@ -1,6 +1,3 @@
-// window
-window.width = window.clientWidth;
-
 const sliderWrapper = document.querySelector('.slider_wrapper');
 const itemAll = document.querySelectorAll('.slider_item');
 const itemMarginLeft = Number(parseFloat(window.getComputedStyle(itemAll[1]).getPropertyValue('margin-left')));
