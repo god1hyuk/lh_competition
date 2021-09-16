@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
 }
+html, body {
+    width: 100vw !important;
+    overflow-x: hidden;
+}
 li {
     list-style: none;
 }
@@ -140,7 +144,7 @@ button:hover {
 
 /* 메인 페이지 */
 .main_page {
-    width: calc(100vw - 17px);
+    width: 100vw;
 }
 .main_page header {
     position: relative;
@@ -262,14 +266,14 @@ button:hover {
     position: absolute;
     bottom: 0;
     bottom: -7.1992vw;
-    left: calc(4.5717vw - 17px);
+    left: 4.5717vw;
     color: #fff;
 }
 /* 메인 페이지 공모 마감일정 */
 .main_page .compt_infoBox .d_day {
     position: relative;
-    /* width: 22.3857vw; */
-    width: 22.6484vw;
+    width: 22.3857vw;
+    /* width: 22.6484vw; */
     padding-top: 3.6784vw;
     background: #232937;
     border-bottom: 5.2549vw solid #232937;
@@ -404,7 +408,7 @@ button:hover {
     position: absolute;
     top: 0;
     left: 0;
-    width: calc(100vw - 17px);
+    width: 100vw;
     max-width: 100%;
     height: 50.9196vw;
     overflow: hidden;
@@ -581,7 +585,7 @@ button:hover {
 /* 푸터 */
 footer {
     position: relative;
-    width: calc(100vw - 17px);
+    width: 100vw;
     max-width: 100%;
     font-size: 0.7882vw;
     padding: 35px 0 62px;
