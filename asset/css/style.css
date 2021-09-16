@@ -2,9 +2,6 @@
     margin: 0;
     padding: 0;
 }
-html, body {
-    width: 100vw;
-}
 li {
     list-style: none;
 }
@@ -24,6 +21,9 @@ button:hover {
 }
 
 /* 스크롤바 */
+body::-webkit-scrollbar {
+    /* display: none; */
+}
 .scroll::-webkit-scrollbar {
     width: 0.2627vw;
     background-color: #2d3342;
@@ -584,7 +584,6 @@ button:hover {
 footer {
     position: relative;
     width: 100vw;
-    max-width: 100%;
     font-size: 0.7882vw;
     padding: 35px 0 62px;
     background: #232937;

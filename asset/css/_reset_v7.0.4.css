@@ -1,0 +1,246 @@
+@charset "UTF-8";
+
+/*!
+ * css reset common v7.0.4   |   20200908
+ *
+ * Include: _reset.css
+ * Include: layout.css
+ *
+ * Copyright on 2013 - 2020 Hwang mi-ran, All right reserved.
+ * Reference: Eric Meyer reset(http://meyerweb.com/eric/tools/css/reset/)
+ * ran_work@wdcals.co.kr
+ * ran_work@nate.com
+ * License: none
+ *
+ * Please do not remove the comment(sourcecode is allowed to be edited and redistributed)
+ *
+ * Last Update. 2020-09-08
+ */
+
+/* 요소(element) 여백 초기화 ------------------------------------------------------------------------------------ */
+/* 기본요소 여백 정의 */
+html,
+body,
+div,
+span,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+blockquote,
+p,
+address,
+pre,
+cite,
+form,
+fieldset,
+legend,
+label,
+input,
+textarea,
+select,
+figure,
+figcaption,
+details,
+table,
+th,
+td,
+section,
+article,
+aside,
+footer,
+header,
+menu,
+nav,
+hgroup {
+  -webkit-box-sizing: border-box; /* Sfari and Chrome, other webkit surpport */
+  -moz-box-sizing: border-box; /* FireFox and other Gecko surpport */
+  box-sizing: border-box; /* Opera and IE8+ surpport */
+  margin: 0;
+  padding: 0;
+}
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+/* 링크요소 */
+a {
+  vertical-align: top;
+  text-decoration: none;
+  color: inherit;
+}
+a.a11y {
+  display: block;
+}
+a.a11y.voiceInfo {
+  width: 0;
+  height: 0;
+  text-indent: -9999px;
+  display: block;
+  position: absolute;
+  left: -9999px;
+  overflow: hidden;
+}
+
+/* Tag Layout 초기화 -------------------------------------------------------------------------------------------- */
+/* 폼요소 */
+button {
+  font-family: inherit;
+  white-space: nowrap;
+  border: none;
+  overflow: visible;
+  cursor: pointer;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+input[type="button"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+input:focus {
+  outline: none;
+}
+
+/* 제목요소 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+/* 수평선*/
+hr {
+  display: none;
+}
+
+/* 테두리 */
+fieldset,
+img,
+abbr,
+acronym {
+  border: 0 none;
+}
+img[usemap] {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  border: none;
+}
+
+/* 목록 */
+ol,
+ul {
+  list-style: none;
+}
+
+/* 테이블 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+caption,
+th,
+td {
+  font-weight: normal;
+}
+table caption.a11y {
+  line-height: 0;
+}
+
+/* 텍스트 관련 요소 */
+address,
+strong,
+em,
+cite {
+  font-weight: normal;
+  font-style: normal;
+}
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+
+/* 인용문 */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+}
+blockquote,
+q {
+  quotes: "" "";
+}
+
+/* 숨김 요소 */
+legend,
+.hidden {
+  /*width: 1px; height: 1px; */
+  color: transparent;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  display: none;
+}
+.a11y {
+  color: transparent;
+  font-size: 0;
+  line-height: 0;
+}
+.a11y > a {
+  display: inline;
+}
+
+/* 기능요소 초기화 ---------------------------------------------------------------------------------------------- */
+.no-drag {
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+
+/* HTML5 Element surpport --------------------------------------------------------------------------------------- */
+section,
+article,
+aside,
+footer,
+header,
+main,
+menu,
+nav,
+hgroup,
+figure,
+figcaption,
+details,
+summary {
+  display: block;
+}
