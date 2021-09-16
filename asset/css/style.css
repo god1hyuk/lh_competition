@@ -13,9 +13,127 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-repeat: no-repeat;
+    transition: background .1s;
 }
 button:hover {
     cursor: pointer;
+}
+.scroll::-webkit-scrollbar {
+    width: 0.2627vw;
+    background-color: #2d3342;
+    border-radius: 100px;
+}
+.scroll::-webkit-scrollbar-thumb {
+    background: #5d626d;
+    border-radius: 100px;
+}
+.scroll::-webkit-scrollbar,
+.scroll::-webkit-scrollbar-thumb {
+    overflow: visible;
+}
+.scrollBar {
+    position: absolute;
+    top: 0;
+    width: 0.2627vw;
+    height: 100%;
+    opacity: 1;
+    transition: opacity .1s;
+}
+:hover + .scrollBar {
+    opacity: 0;
+}
+
+/* 인트로 페이지 */
+.loading_page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.loading_page img {
+    opacity: 0;
+    animation: logo 2s both;
+}
+@keyframes logo {
+    100% {
+        opacity: 1;
+    }
+}
+.loading_page h1 {
+    font-size: 25px;
+    font-weight: 100;
+    color: #050c14;
+    margin: 46px 0;
+}
+/* 로더 */
+.loader {
+    position: relative;
+    width: 76px;
+    height: 76px;
+    opacity: 0;
+    animation: loader 1s both;
+    animation-delay: 5s;
+}
+@keyframes loader {
+    100% {
+        opacity: 1;
+    }
+}
+.loader .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    background: #fff;
+    border-radius: 100%;
+    z-index: 2;
+}
+.loader .bar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ececec;
+    /* -webkit-border-radius: 100%; */
+    border-radius: 100%;
+    clip: rect(0px, 76px, 76px, 38px);
+    margin: 0;
+    padding: 0;
+}
+.loader .bar .progress {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* -webkit-border-radius: 100%; */
+    border-radius: 100%;
+    clip: rect(0px , 38px, 76px, 0px);
+    background: #f27214;
+    z-index: 1;
+}
+.loader .left .progress {
+    animation: left 3s 5s linear both;
+}
+@keyframes left {
+    100% {
+        transform: rotate(180deg);
+    }
+}
+.loader .right {
+    transform: rotate(180deg);
+}
+.loader .right .progress {
+    animation: right 3s linear both;
+    animation-delay: 8s;
+}
+@keyframes right {
+    100% {
+        transform: rotate(180deg);
+    }
 }
 
 /* 메인 페이지 */
@@ -48,17 +166,29 @@ button:hover {
     justify-content: flex-end;
     margin-top: 3.6784vw;
 }
-.main_page nav .sub_menu a {
+.main_page nav .sub_menu button {
     display: flex;
     align-items: center;
 }
-.main_page nav .sub_menu img {
+.main_page nav .sub_menu .facebook {
     width: 12px;
+    height: 19px;
+    background-image: url(../images/icon/facebook_icon.png);
+    background-position: center;
+    background-size: 100%;
+    background-color: transparent;
+    border: none;
+}
+.main_page nav .sub_menu .facebook:hover {
+    background-image: url(../images/icon/facebook_icon_on.png);
+}
+.main_page nav .sub_menu img {
+    /* width: 12px; */
 }
 .main_page nav .language {
     margin-left: 1.0510vw;
 }
-.main_page nav .language a {
+.main_page nav .language button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,6 +197,10 @@ button:hover {
     font-size: 13px;
     color: #fff;
     background: #9dc912;
+    border: none;
+}
+.main_page nav .language button:hover {
+    background: #9abe0a;
 }
 .main_page nav .nav_right ul {
     padding-right: 1.8392vw;
@@ -84,10 +218,23 @@ button:hover {
 .main_page nav .top_menu a {
     display: flex;
     align-items: center;
+    transition: all .1s;
 }
-.main_page nav .top_menu img {
+.main_page nav .top_menu a:hover {
+    color: #9dc912;
+}
+.main_page nav .myPageIcon {
     width: 12px;
+    height: 13px;
     margin-right: 5px;
+    background-image: url(../images/icon/myPage_icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    transition: background .1s;
+}
+.main_page nav li:last-child a:hover .myPageIcon {
+    background-image: url(../images/icon/myPage_icon_on.png);
 }
 .main_page nav .main_menu {
     text-align: right;
@@ -98,7 +245,10 @@ button:hover {
 .main_page nav .main_menu li:not(:last-child) {
     margin-bottom: 1.7867vw;
 }
-.main_page nav .main_menu li:hover {
+.main_page nav .main_menu a {
+    transition: color .1s;
+}
+.main_page nav .main_menu a:hover {
     color: #f27214;
 }
 
@@ -114,15 +264,21 @@ button:hover {
 /* 메인 페이지 공모 마감일정 */
 .main_page .compt_infoBox .d_day {
     position: relative;
-    width: 22.3857vw;
+    /* width: 22.3857vw; */
+    width: 22.6484vw;
     padding-top: 3.6784vw;
     background: #232937;
     border-bottom: 5.2549vw solid #232937;
 }
 .main_page .compt_infoBox .dDay_list {
+    position: relative;
     height: 22.701vw;
     overflow-y: scroll;
     margin: 0 0.5255vw;
+}
+.main_page .compt_infoBox .d_day .scrollBar {
+    right: 0.5255vw;
+    background: #232937;
 }
 .main_page .compt_infoBox .dDay_list li {
     position: relative;
@@ -136,7 +292,7 @@ button:hover {
     position: absolute;
     bottom: 0;
     left: 2.1019vw;
-    width: 20px;
+    width: 2.8376vw;
     height: 3px;
     background: #fff;
 }
@@ -170,6 +326,9 @@ button:hover {
     background: #a5cb0b;
     border: none;
 }
+.main_page .compt_infoBox .d_day button:hover {
+    background: #9abe0a;
+}
 .main_page .compt_infoBox .d_day button img {
     width: 1.5765vw;
 }
@@ -189,6 +348,7 @@ button:hover {
 }
 .main_page .compt_infoBox .winner h2 {
     font-size: 2.5223vw;
+    transition: color .1s;
 }
 .main_page .compt_infoBox .winner_bottom {
     display: flex;
@@ -206,10 +366,13 @@ button:hover {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    transition: background .3s;
+    transition: background .1s;
 }
 .main_page .compt_infoBox .winner a:hover .goWinner_btn {
     background-image: url(../images/icon/goWinner_icon_on.png);
+}
+.main_page .compt_infoBox .winner a:hover h2 {
+    color: #ff9f59;
 }
 .main_page .compt_infoBox .winner button {
     position: absolute;
@@ -221,6 +384,9 @@ button:hover {
     color: #fff;
     background: #f27214;
     border: none;
+}
+.main_page .compt_infoBox .winner button:hover {
+    background: #e36a12;
 }
 .main_page .compt_infoBox .winner button img {
     margin: 0 1.051vw;
@@ -249,11 +415,15 @@ button:hover {
 }
 .main_page .slider_item {
     transform: translateY(11.0878vw);
+    /* width: 72.1492vw;
+    height: 50.9196vw; */
     font-size: 100px;
     text-align: right;
     margin-left: 14.0305vw;
+    /* background: pink; */
 }
 .main_page .slider_item img {
+    /* display: none; */
     width: 72.1492vw;
 }
 .main_page .sliderBtn {
@@ -301,7 +471,7 @@ button:hover {
 .main_page .archiving {
     position: relative;
     margin-top: 13.6626vw;
-    padding: 5.2549vw 1.5765vw;
+    padding: 5.2549vw 1.5765vw 2.1019vw;
     background-image: url(../images/archiving_bg.jpg);
     background-repeat: no-repeat;
     background-position: top center;
@@ -310,9 +480,9 @@ button:hover {
 .main_page .archiving::before {
     content: '';
     position: absolute;
-    /* top: -50%; */
     top: -3.1945vw;
     left: 50%;
+    transform: translateX(-50%);
     width: 1px;
     height: 6.8839vw;
     background: #de7238;
@@ -334,6 +504,9 @@ button:hover {
 .main_page .archiving .more_btn img {
     margin-left: 15px;
 }
+.main_page .archiving .more_btn:hover {
+    background: #2f3543;
+}
 .main_page .arch_list {
     margin-top: 5.7803vw;
 }
@@ -343,35 +516,104 @@ button:hover {
     justify-content: space-between;
 }
 .main_page .arch_list li {
+    position: relative;
     width: 16.6666%;
-    height: 400px;
+    height: 21.0194vw;
     overflow: hidden;
     margin-right: 1.5765vw;
     border: 1px solid #d4d4d4;
+    box-sizing: border-box;
 }
 .main_page .arch_list li img {
-    width: 100%;
-    transition: transform 1.2s;
-}
-.main_page .arch_list li:hover img {
-    transform: scale(1.1);
+    height: 100%;
+    transition: transform .8s;
 }
 .main_page .arch_list li:last-child {
     margin-right: 0;
 }
 .main_page .arch_list li:nth-child(2n) {
-    height: 290px;
+    height: 15.2391vw;
 }
 .main_page .arch_list ul:last-child {
     align-items: end;
     transform: translateY(-4.2039vw);
 }
 .main_page .arch_list ul:last-child li {
-    height: 290px;
+    height: 15.2391vw;
 }
 .main_page .arch_list ul:last-child li:nth-child(2n) {
-    height: 400px;
+    height: 21.0194vw;
+}
+.main_page .arch_list .text_wrap {
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    height: 100%;
+    font-size: 1.051vw;
+    color: #fff;    
+    background: rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    transition: opacity .3s;
+    z-index: 3;
+}
+.main_page .arch_list .text_wrap h4 {
+    padding: 2.3647vw 1.5765vw 0;
+}
+.main_page .arch_list .text_wrap p {
+    text-align: right;
+    font-size: 13px;
+    padding: 0 1.5765vw 1.5765vw;
+}
+.main_page .arch_list li:hover img {
+    transform: scale(1.1);
+}
+.main_page .arch_list li:hover .text_wrap {
+    opacity: 1;
 }
 
-
-
+/* 푸터 */
+footer {
+    position: relative;
+    font-size: 0.7882vw;
+    padding: 35px 0 62px;
+    background: #232937;
+}
+footer .footer_menu {
+    display: flex;
+    justify-content: center;
+    color: #ff8d3a;
+}
+footer .footer_menu li {
+    padding: 0 1.051vw;
+}
+footer .footer_menu li:first-child {
+    border-right: 1px solid #575b6d;
+}
+footer .footer_menu li:last-child {
+    border-left: 1px solid #575b6d;
+}
+footer .companyInfo {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    margin-top: 1.2612vw;
+}
+footer .companyInfo li:first-child {
+    margin-right: 1.9968vw;
+}
+footer .copyright {
+    text-align: center;
+    color: #fff;
+    margin-top: 0.5255vw;
+}
+footer select {
+    position: absolute;
+    top: 2.1019vw;
+    right: 5.8854vw;
+    width: 11.0352vw;
+    height: 2.3647vw;
+    font-size: 0.7882vw;
+    padding: 0 1.2086vw;
+}

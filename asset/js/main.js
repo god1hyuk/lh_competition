@@ -16,24 +16,9 @@ for (item of itemAll) {
     sliderItem.push(item);
 }
 
-// sliderItem.push(clonedFirst);
-// sliderItem.push(clonedSecond);
-// sliderWrapper.appendChild(clonedFirst);
-// sliderWrapper.appendChild(clonedSecond);
-// sliderItem.shift(clonedLast);
-// sliderWrapper.prepend(clonedLast);
-
-// sliderWrapper.style.right = -(itemAll[0].offsetWidth + itemMarginLeft)+ 'px';
-
 sliderItem[0].style.transform = 'translateY(0)';
 
 slideNext.addEventListener('click', function () {
-
-    // const clonedChild = sliderItem[curIndex].cloneNode(true);
-    // console.log(clonedChild);
-    // sliderItem.push(clonedChild);
-    // sliderWrapper.append(clonedChild);
-
     curIndex++;
 
     if (curIndex > sliderItem.length-1) {
@@ -44,10 +29,10 @@ slideNext.addEventListener('click', function () {
     sliderWrapper.style.transition = 'right 1.5s';
     sliderItem[curIndex].style.transition = 'transform 1.5s';
     // sliderItem[curIndex-1].style.transition = '1.5s';
+    sliderItem[curIndex].style.transform = 'translateY(0)';
     sliderWrapper.style.right = -(itemAll[0].offsetWidth + itemMarginLeft) * (curIndex) + 'px';
     // sliderWrapper.style.right = -(itemAll[0].offsetWidth) * curIndex + 'px';
     // sliderItem[curIndex-1].style.marginLeft = 0 + 'px';
-    sliderItem[curIndex].style.transform = 'translateY(0)';
 
     console.log(curIndex);
 });
