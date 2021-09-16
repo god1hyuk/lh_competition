@@ -140,8 +140,7 @@ button:hover {
 
 /* 메인 페이지 */
 .main_page {
-    width: 100vw;
-    max-width: 100%;
+    width: calc(100vw - 17px);
 }
 .main_page header {
     position: relative;
@@ -263,7 +262,7 @@ button:hover {
     position: absolute;
     bottom: 0;
     bottom: -7.1992vw;
-    left: 4.5717vw;
+    left: calc(4.5717vw - 17px);
     color: #fff;
 }
 /* 메인 페이지 공모 마감일정 */
@@ -405,7 +404,7 @@ button:hover {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: calc(100vw - 17px);
     max-width: 100%;
     height: 50.9196vw;
     overflow: hidden;
@@ -582,7 +581,7 @@ button:hover {
 /* 푸터 */
 footer {
     position: relative;
-    width: 100vw;
+    width: calc(100vw - 17px);
     max-width: 100%;
     font-size: 0.7882vw;
     padding: 35px 0 62px;
