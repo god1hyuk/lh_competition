@@ -265,12 +265,14 @@ button:hover {
     position: absolute;
     bottom: 0;
     bottom: -7.1992vw;
-    left: 4.5717vw;
+    /* left: 4.5717vw; */
+    left: 5.4651vw;
     color: #fff;
 }
 /* 메인 페이지 공모 마감일정 */
 .main_page .compt_infoBox .d_day {
     position: relative;
+    width: 22.3857vw;
     padding-top: 3.6784vw;
     background: #232937;
     border-bottom: 5.2549vw solid #232937;
