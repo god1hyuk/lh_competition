@@ -19,6 +19,8 @@ button {
 button:hover {
     cursor: pointer;
 }
+
+/* 스크롤바 */
 .scroll::-webkit-scrollbar {
     width: 0.2627vw;
     background-color: #2d3342;
@@ -148,8 +150,8 @@ button:hover {
     display: flex;
 }
 .main_page nav .nav_left {
-    /* width: 12.9270vw; */
-    width: 13.8203vw;
+    width: 12.9270vw;
+    /* width: 13.8203vw; */
 }
 .main_page nav .nav_right {
     width: 14.0305vw;
@@ -182,9 +184,6 @@ button:hover {
 }
 .main_page nav .sub_menu .facebook:hover {
     background-image: url(../images/icon/facebook_icon_on.png);
-}
-.main_page nav .sub_menu img {
-    /* width: 12px; */
 }
 .main_page nav .language {
     margin-left: 1.0510vw;
@@ -265,8 +264,8 @@ button:hover {
 /* 메인 페이지 공모 마감일정 */
 .main_page .compt_infoBox .d_day {
     position: relative;
-    /* width: 22.3857vw; */
-    width: 22.6484vw;
+    width: 22.3857vw;
+    /* width: 22.6484vw; */
     padding-top: 3.6784vw;
     background: #232937;
     border-bottom: 5.2549vw solid #232937;
