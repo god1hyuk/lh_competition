@@ -148,7 +148,8 @@ button:hover {
     display: flex;
 }
 .main_page nav .nav_left {
-    width: 12.9270vw;
+    /* width: 12.9270vw; */
+    width: 13.8203vw;
 }
 .main_page nav .nav_right {
     width: 14.0305vw;
@@ -535,7 +536,7 @@ button:hover {
     height: 15.2391vw;
 }
 .main_page .arch_list ul:last-child {
-    align-items: end;
+    align-items: flex-end;
     transform: translateY(-4.2039vw);
 }
 .main_page .arch_list ul:last-child li {
