@@ -5,6 +5,9 @@
 *, *::after, *::before {
     box-sizing: border-box;
 }
+body {
+    overflow-y: overlay;
+}
 li {
     list-style: none;
 }
@@ -462,17 +465,17 @@ body::-webkit-scrollbar {
     padding-bottom: 1.5765vw;
     border-bottom: 3px solid #232937;
 }
-.main_page .sPagination > div {
+.main_page .sPagination > span {
     width: 0.8408vw;
     height: 0.8408vw;
     margin-left: 0.8408vw;
     background: #d4d7e0;
     border-radius: 100%;
 }
-.main_page .sPagination > div:last-child {
+.main_page .sPagination > span:last-child {
     margin-right: 0;
 }
-.main_page .sPagination div.active {
+.main_page .sPagination span.active {
     background-color: #9dc912;
 }
 
@@ -627,9 +630,3 @@ footer select {
     font-size: 0.7882vw;
     padding: 0 1.2086vw;
 }
-
-
-
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    소스입력
-  }
