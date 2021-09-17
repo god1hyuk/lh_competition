@@ -1,5 +1,7 @@
 // window
 const body = document.body;
+// document.documentElement.style.setProperty('--scrollbar-width', (window.innerWidth - document.documentElement.clientWidth) + 'px');
+body.clientWidth = window.innerWidth;
 
 
 const sliderWrapper = document.querySelector('.slider_wrapper');
