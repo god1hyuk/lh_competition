@@ -531,14 +531,13 @@ body::-webkit-scrollbar {
     position: relative;
     width: 16.6666%;
     height: 21.0194vw;
-    overflow: hidden;
     margin-right: 1.5765vw;
+    background-image: url(../images/archiving0.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     border: 1px solid #d4d4d4;
     box-sizing: border-box;
-}
-.main_page .arch_list li img {
-    height: 100%;
-    transition: transform .8s;
 }
 .main_page .arch_list li:last-child {
     margin-right: 0;

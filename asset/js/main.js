@@ -1,11 +1,3 @@
-// window
-const body = document.body;
-// document.documentElement.style.setProperty('--scrollbar-width', (window.innerWidth - document.documentElement.clientWidth) + 'px');
-body.clientWidth = window.innerWidth;
-console.log(body.clientWidth);
-console.log(body.getBoundingClientRect().width);
-
-
 const sliderWrapper = document.querySelector('.slider_wrapper');
 const itemAll = document.querySelectorAll('.slider_item');
 const itemMarginLeft = Number(parseFloat(window.getComputedStyle(itemAll[1]).getPropertyValue('margin-left')));
@@ -48,3 +40,9 @@ slideNext.addEventListener('click', function () {
 // slidePrev.addEventListener('click', function () {
 
 // });
+
+// 아카이빙
+const arch_li = document.querySelectorAll('.arch_list li');
+for (let i=0; i<arch_li.length; i++) {
+    arch_li[i].style.backgroundImage = 'url(asset/images/archiving' + i + '.jpg)';
+};
