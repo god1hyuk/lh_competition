@@ -426,13 +426,16 @@ body::-webkit-scrollbar {
     right: 0;
 }
 .main_page .slider_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transform: translateY(11.0878vw);
     width: 72.1492vw;
+    height: 50.9196vw;
+    overflow: hidden;
     font-size: 100px;
     text-align: right;
     margin-left: 14.0305vw;
-    /* hey */
-    /* background: pink; */
 }
 .main_page .slider_item img {
     /* display: none; */
@@ -447,12 +450,11 @@ body::-webkit-scrollbar {
     width: 72.1492vw;
 }
 .main_page .sliderBtn button {
+    width: 0.9459vw;
+    /* height: 1.7341vw; */
     background-color: transparent;
     border: none;
     margin: 0 2.1019vw;
-}
-.main_page .sliderBtn button:hover {
-    cursor: pointer;
 }
 .main_page .sPagination {
     display: flex;
@@ -532,12 +534,15 @@ body::-webkit-scrollbar {
     width: 16.6666%;
     height: 21.0194vw;
     margin-right: 1.5765vw;
-    background-image: url(../images/archiving0.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: auto 100%;
     border: 1px solid #d4d4d4;
     box-sizing: border-box;
+    transition: background .8s;
+}
+.main_page .arch_list li:hover {
+    background-size: auto 110%;
 }
 .main_page .arch_list li:last-child {
     margin-right: 0;
