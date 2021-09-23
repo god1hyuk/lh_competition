@@ -6,6 +6,7 @@
     box-sizing: border-box;
 }
 body {
+    font-family: 'NotoSansKR-Regular';
     overflow-y: overlay;
 }
 li {
@@ -64,86 +65,50 @@ body::-webkit-scrollbar {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.loading_page img {
+.loading_page .logo {
     opacity: 0;
-    animation: logo 2s both;
 }
-@keyframes logo {
-    100% {
-        opacity: 1;
-    }
-}
-.loading_page h1 {
+.typing_wrap {
+    position: relative;
+    /* width: 100vw; */
+    font-family: 'Roboto-Thin';
     font-size: 25px;
-    font-weight: 100;
-    color: #050c14;
+    letter-spacing: 5px;
     margin: 46px 0;
+}
+.loading_page .typing_text {
+    opacity: 0;
+}
+.loading_page .typing {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    text-align: center;
+    color: #050c14;
 }
 /* 로더 */
 .loader {
     position: relative;
     width: 76px;
     height: 76px;
-    opacity: 0;
-    animation: loader 1s both;
-    animation-delay: 5s;
-}
-@keyframes loader {
-    100% {
-        opacity: 1;
-    }
+    border-radius: 50%;
+    transition: .3s;
 }
 .loader .inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
     height: 90%;
+    color: #050c14;
+    border-radius: 50%;
     background: #fff;
-    border-radius: 100%;
-    z-index: 2;
-}
-.loader .bar {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #ececec;
-    /* -webkit-border-radius: 100%; */
-    border-radius: 100%;
-    clip: rect(0px, 76px, 76px, 38px);
-    margin: 0;
-    padding: 0;
-}
-.loader .bar .progress {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    /* -webkit-border-radius: 100%; */
-    border-radius: 100%;
-    clip: rect(0px , 38px, 76px, 0px);
-    background: #f27214;
-    z-index: 1;
-}
-.loader .left .progress {
-    animation: left 3s 5s linear both;
-}
-@keyframes left {
-    100% {
-        transform: rotate(180deg);
-    }
-}
-.loader .right {
-    transform: rotate(180deg);
-}
-.loader .right .progress {
-    animation: right 3s linear both;
-    animation-delay: 8s;
-}
-@keyframes right {
-    100% {
-        transform: rotate(180deg);
-    }
 }
 
 /* 메인 페이지 */
@@ -250,6 +215,7 @@ body::-webkit-scrollbar {
 }
 .main_page nav .main_menu {
     text-align: right;
+    font-family: 'NanumSquareEB';
     /* font-size: 20px; */
     font-size: 1.051vw;
     margin-top: 6.3058vw;
@@ -314,6 +280,7 @@ body::-webkit-scrollbar {
     justify-content: space-between;
 }
 .main_page .compt_infoBox .dDay_title h3 {
+    font-family: 'NanumSquareEB';
     font-size: 2.1019vw;
     color: #ff9f59;
 }
@@ -326,6 +293,8 @@ body::-webkit-scrollbar {
     margin-right: 0.6831vw;
 }
 .main_page .compt_infoBox .d_day p {
+    line-height: 28px;
+    font-family: 'NanumSquareR';
     font-size: 1.0510vw;
     margin-top: 2.1019vw;
 }
@@ -359,6 +328,8 @@ body::-webkit-scrollbar {
     height: 100%;
 }
 .main_page .compt_infoBox .winner h2 {
+    line-height: 60px;
+    font-family: 'NanumSquareB';
     font-size: 2.5223vw;
     transition: color .1s;
 }
@@ -368,8 +339,12 @@ body::-webkit-scrollbar {
     justify-content: space-between;
 }
 .main_page .compt_infoBox .winner p {
+    font-family: 'NotoSansKR-Black';
     /* font-size: 0.9459vw; */
     font-size: 18px;
+}
+.main_page .compt_infoBox .winner span {
+    font-family: 'NotoSansKR-Regular';
 }
 .main_page .compt_infoBox .goWinner_btn {
     width: 57px;
@@ -392,6 +367,7 @@ body::-webkit-scrollbar {
     left: 0;
     width: 19.6006vw;
     height: 4.4666vw;
+    font-family: 'NanumSquareB';
     font-size: 1.051vw;
     color: #fff;
     background: #f27214;
@@ -405,6 +381,45 @@ body::-webkit-scrollbar {
 }
 .main_page .compt_infoBox .winner button img:first-child {
     width: 1.051vw;
+}
+
+/* 캘린더팝업 */
+.modal_bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    background: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s;
+}
+.modal_bg.active {
+    visibility: visible;
+    opacity: 1;
+}
+.main_page .calendarPop {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60.1156vw;
+}
+.main_page .calendarPop img {
+    width: 100%;
+}
+.main_page .calendarPop button {
+    position: absolute;
+    top: 0;
+    right: -40px;
+    width: 24px;
+    height: 24px;
+    background: transparent;
+}
+.main_page .calendarPop button img {
+    width: 100%;
 }
 
 /* 메인 슬라이더 */
@@ -451,10 +466,15 @@ body::-webkit-scrollbar {
 }
 .main_page .sliderBtn button {
     width: 0.9459vw;
-    /* height: 1.7341vw; */
     background-color: transparent;
     border: none;
     margin: 0 2.1019vw;
+}
+.main_page .sliderBtn button img {
+    transition: transform .13s;
+}
+.main_page .sliderBtn button:hover img {
+    transform: scale(1.2);
 }
 .main_page .sPagination {
     display: flex;
@@ -503,6 +523,7 @@ body::-webkit-scrollbar {
 }
 .main_page .archiving h1 {
     text-align: center;
+    font-family: 'NanumSquareEB';
     font-size: 3.0478vw;
 }
 .main_page .archiving .more_btn {
@@ -516,7 +537,7 @@ body::-webkit-scrollbar {
     border-radius: 0;
 }
 .main_page .archiving .more_btn img {
-    margin-left: 15px;
+    margin-left: 13px;
 }
 .main_page .archiving .more_btn:hover {
     background: #2f3543;
@@ -535,14 +556,14 @@ body::-webkit-scrollbar {
     height: 21.0194vw;
     margin-right: 1.5765vw;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top center;
     background-size: auto 100%;
     border: 1px solid #d4d4d4;
     box-sizing: border-box;
     transition: background .8s;
 }
 .main_page .arch_list li:hover {
-    background-size: auto 110%;
+    background-size: auto 105%;
 }
 .main_page .arch_list li:last-child {
     margin-right: 0;
@@ -561,7 +582,6 @@ body::-webkit-scrollbar {
     height: 21.0194vw;
 }
 .main_page .arch_list .text_wrap {
-    /* display: none; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -575,6 +595,8 @@ body::-webkit-scrollbar {
     z-index: 3;
 }
 .main_page .arch_list .text_wrap h4 {
+    font-family: 'NanumSquareB';
+    line-height: 28px;
     padding: 2.3647vw 1.5765vw 0;
 }
 .main_page .arch_list .text_wrap p {
@@ -633,4 +655,9 @@ footer select {
     height: 2.3647vw;
     font-size: 0.7882vw;
     padding: 0 1.2086vw;
+}
+
+/* 공모결과 페이지 */
+.winner_page {
+    margin-top: 20px;
 }

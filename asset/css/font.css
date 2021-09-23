@@ -97,3 +97,10 @@
        url(../fonts/NanumSquare/NanumSquareR.ttf) format('truetype'),
        url(../fonts/NanumSquare/NanumSquareR.woff) format('woff');
 }
+
+/* roboto */
+@font-face {
+  font-family: 'Roboto-Thin';
+  font-style: normal;
+  src: url(../fonts/Roboto/Roboto-Thin.ttf);
+}

@@ -12,6 +12,13 @@
     <link rel="stylesheet" href="asset/css/font.css" />
     <!-- Style -->
     <link rel="stylesheet" href="asset/css/style.css" />
+    <!-- AOS -->
+    <link rel="stylesheet" href="asset/css/aos.min.css" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="asset/images/logo/android_LH.png" />
+    <link rel="apple-touch-icon-precomposed" href="asset/images/logo/apple_LH.png" />
+    <link rel="apple-touch-icon" href="asset/images/logo/apple_LH.png" />
+    <link rel="apple-touch-startup-image" href="asset/images/logo/apple_LH.png" />
 </head>
 <body>
     <!-- 메인 페이지 -->
@@ -22,7 +29,7 @@
             <nav>
                 <div class="nav_left">
                     <div class="logo">
-                        <a href="">
+                        <a href="index.html">
                             <img src="asset/images/logo/main_logo.png" alt="LH_로고" />
                         </a>
                     </div>
@@ -45,7 +52,6 @@
                         </li>
                         <li>
                             <a href="">
-                                <!-- <img src="asset/images/icon/myPage_icon.png" alt="마이페이지버튼_아이콘" /> -->
                                 <div class="myPageIcon"></div>
                                 My Page
                             </a>
@@ -59,7 +65,7 @@
                             <a href="">Competition</a>
                         </li>
                         <li>
-                            <a href="">Winner</a>
+                            <a href="winner_page.html">Winner</a>
                         </li>
                         <li>
                             <a href="">News</a>
@@ -95,7 +101,7 @@
                         </li>
                     </ul>
                     <div class="scrollBar"></div>
-                    <button>
+                    <button id="modal_on">
                         <img src="asset/images/icon/calendar_icon.png" alt="일정버튼_아이콘" />
                     </button>
                 </div>
@@ -115,10 +121,21 @@
                     </button>
                 </div>
             </div>
+
+            <!-- 캘린더팝업 -->
+            <div class="modal_bg">
+                <div class="calendarPop">
+                    <button class="modal_close">
+                        <img src="asset/images/icon/close_white.png" alt="팝업닫기_버튼" />
+                    </button>
+                    <img src="asset/images/calendar_sample.jpg" alt="캘린더팝업_샘플"/>
+                </div>
+            </div>
+
         </header>
     
         <!-- 메인 페이지 슬라이더 -->
-        <div class="slider_container">
+        <div class="slider_container" data-aos="fade-right" data-aos-duration="1300">
             <ul class="slider_wrapper">
                 <li class="slider_item 0" data-value="0">
                     <img src="asset/images/main_slider0.jpg" alt="메인슬라이더_이미지1" />
@@ -160,7 +177,7 @@
                 MORE
                 <img src="asset/images/icon/moreBtn_icon.png" alt="더보기버튼_아이콘" />
             </button>
-            <div class="arch_list">
+            <div class="arch_list"  data-aos="fade-up" data-aos-duration="1200">
                 <ul>
                     <li>
                         <a href="">
@@ -263,6 +280,7 @@
                 </ul>
             </div>
         </div>
+
     </div>
 
     <!-- 푸터 -->
@@ -290,5 +308,15 @@
 
     <!-- Main js -->
     <script src="asset/js/main.js"></script>
+    <!-- AOS -->
+    <script src="asset/js/aos.min.js"></script>
+    <script>
+        AOS.init({
+            disable:  function msieversion() {
+                return !!(window.navigator.userAgent.indexOf("MSIE ") > 0 || navigator.userAgent.match(
+                    /Trident.*rv\:11\./));
+            }
+        });
+    </script>
 </body>
 </html>
