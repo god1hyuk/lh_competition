@@ -658,6 +658,7 @@ footer select {
 }
 
 /* 공모결과 페이지 */
-.winner_page {
+.winner_page img {
+    width: 100vw;
     margin-top: 20px;
 }
