@@ -67,17 +67,19 @@ setTimeout(() => {
 }, 1000);
 
 // 팝업
+const body = document.body;
 const modal = document.querySelectorAll('.modal_bg');
 const modal_on = document.querySelectorAll('#modal_on');
 const modal_close = document.querySelectorAll('.modal_close');
 
 
 for (let i=0; i<modal.length; i++) {
-    // modal[i].style.display = 'none';
     modal_on[i].addEventListener('click', function () {
+        body.style.overflow = 'hidden';
         modal[i].classList.add('active');
     });
     modal_close[i].addEventListener('click', function () {
+        body.style.overflow = 'visible';
         modal[i].classList.remove('active');
     });
 }
