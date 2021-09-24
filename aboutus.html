@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LH 설계공모</title>
+    <!-- Reset -->
+    <link rel="stylesheet" href="asset/css/_reset_v7.0.4.css" />
+    <!-- Common -->
+    <!-- Font -->
+    <link rel="stylesheet" href="asset/css/font.css" />
+    <!-- Swiper -->
+    <link rel="stylesheet" href="asset/css/swiper-bundle.min.css" />
+    <!-- Style -->
+    <link rel="stylesheet" href="asset/css/style.css" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="asset/images/logo/android_LH.png" />
+    <link rel="apple-touch-icon-precomposed" href="asset/images/logo/apple_LH.png" />
+    <link rel="apple-touch-icon" href="asset/images/logo/apple_LH.png" />
+    <link rel="apple-touch-startup-image" href="asset/images/logo/apple_LH.png" />
+</head>
+<body>
+
+    <!-- About Us 페이지 -->
+    <div class="aboutUs_page">
+        <!-- About Us 슬라이더 -->
+        <div class="swiper aboutUs_slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="text_wrap">
+                        <h1>2022년 LH 건축 설계공모 홈페이지가<br />새롭게 개설되었습니다.</h1>
+                    </div>
+                    <img src="asset/images/aboutus0.jpg" alt="AboutUs_슬라이더1" />
+                </div>
+                <div class="swiper-slide">
+                    <div class="text_wrap">
+                        <h1>LH 건축 설계공모 관련정보에 대한 투명한 정보공개와<br />효율적 업무추진이 가능합니다.</h1>
+                    </div>
+                    <img src="asset/images/aboutus1.jpg" alt="AboutUs_슬라이더2" />
+                </div>
+                <div class="swiper-slide">
+                    <div class="text_wrap">
+                        <h1>LH 설계공모부터 심사결과 공개까지 공모관련<br />업무전반이 온라인으로 진행됩니다.</h1>
+                    </div>
+                    <img src="asset/images/aboutus2.jpg" alt="AboutUs_슬라이더3" />
+                </div>
+                <div class="swiper-slide">
+                    <div class="text_wrap">
+                        <h1>LH는 국토의 미래가치와<br />국민의 행복주거를 약속합니다.</h1>
+                    </div>
+                    <img src="asset/images/aboutus3.jpg" alt="AboutUs_슬라이더4" />
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+
+    <!-- Swiper js -->
+    <script src="asset/js/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        const aboutUsPage = document.querySelector('.aboutUs_page');
+        aboutUsPage.style.opacity = 0;
+        window.onload = pageLoad;
+        function pageLoad() {
+            aboutUsPage.style.transition = 'opacity 3s';
+            aboutUsPage.style.opacity = 1;
+            blackBar();
+            slideTxt();
+            zoomOut();
+        }
+        const aboutUsImg = document.querySelectorAll('.swiper-slide img');
+        const aboutUsBar = document.querySelectorAll('.swiper-slide > .text_wrap');
+        const aboutUsTxt = document.querySelectorAll('.swiper-slide h1');
+        for (let i=0; i<aboutUsImg.length; i++) {
+            aboutUsBar[i].style.opacity = 0;
+            aboutUsTxt[i].style.opacity = 0;
+        }
+        const swiper = new Swiper('.aboutUs_slider', {
+            speed: 2000,
+            effect: 'fade',
+            loop: true,
+            // loopedSlides: 1,
+            touchRatio: 0,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+        swiper.navigation.nextEl.addEventListener('click', () => {
+            zoomOut();
+            blackBar();
+            slideTxt();
+        });
+        swiper.navigation.prevEl.addEventListener('click', () => {
+            zoomOut();
+            blackBar();
+            slideTxt();
+        });
+
+        function zoomOut() {
+            setTimeout(() => {
+                aboutUsImg[swiper.realIndex].style.transition = '3s';
+                aboutUsImg[swiper.realIndex].style.transform = 'scale(1)';
+                aboutUsImg[swiper.realIndex-1].style.transition = '3s';
+                aboutUsImg[swiper.realIndex-1].style.transform = 'scale(1.2)';
+                aboutUsImg[swiper.realIndex+1].style.transition = '3s';
+                aboutUsImg[swiper.realIndex+1].style.transform = 'scale(1.2)';
+            }, 3000);
+        }
+        function blackBar() {
+            setTimeout(() => {
+                aboutUsBar[swiper.realIndex].style.transition = '1.5s';
+                aboutUsBar[swiper.realIndex].style.opacity = 1;
+                aboutUsBar[swiper.realIndex-1].style.transition = '1s';
+                aboutUsBar[swiper.realIndex-1].style.opacity = 0;
+                aboutUsBar[swiper.realIndex+1].style.transition = '1s';
+                aboutUsBar[swiper.realIndex+1].style.opacity = 0;
+            }, 1000);
+        }
+        function slideTxt() {
+            setTimeout(() => {
+                aboutUsTxt[swiper.realIndex].style.transition = '1.5s';
+                aboutUsTxt[swiper.realIndex].style.opacity = 1;
+                aboutUsTxt[swiper.realIndex-1].style.transition = '1s';
+                aboutUsTxt[swiper.realIndex-1].style.opacity = 0;
+                aboutUsTxt[swiper.realIndex+1].style.transition = '1s';
+                aboutUsTxt[swiper.realIndex+1].style.opacity = 0;
+            }, 2000);
+        }
+        
+    </script>
+    <!-- Main js -->
+    <!-- <script src="asset/js/main.js"></script> -->
+</body>
+</html>
