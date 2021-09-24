@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LH 설계공모</title>
+    <!-- Reset -->
+    <link rel="stylesheet" href="asset/css/_reset_v7.0.4.css" />
+    <!-- Common -->
+    <!-- Font -->
+    <link rel="stylesheet" href="asset/css/font.css" />
+    <!-- Style -->
+    <link rel="stylesheet" href="asset/css/style.css" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="asset/images/logo/android_LH.png" />
+    <link rel="apple-touch-icon-precomposed" href="asset/images/logo/apple_LH.png" />
+    <link rel="apple-touch-icon" href="asset/images/logo/apple_LH.png" />
+    <link rel="apple-touch-startup-image" href="asset/images/logo/apple_LH.png" />
+    <style>
+        a, button {
+            position: absolute;
+            background: transparent;
+        }
+        a.home {
+            display: block;
+            top: 1.0417vw;
+            left: 1.3021vw;
+            width: 7.8125vw;
+            height: 3.6458vw;
+        }
+        button.album {
+            top: 25vw;
+            right: 20.2083vw;
+            width: 5.4688vw;
+            height: 2.6042vw;
+        }
+        button.list {
+            top: 25vw;
+            right: 14.5833vw;
+            width: 5.4688vw;
+            height: 2.6042vw;
+        }
+        button.info_album {
+            top: 32.8125vw;
+            left: 13.5417vw;
+            width: 16.6667vw;
+            height: 15.1042vw;
+        }
+        button.info_list {
+            top: 32.8125vw;
+            left: 13.5417vw;
+            width: 72.9167vw;
+            height: 4.6875vw;
+        }
+        button.viewList {
+            top: 24.9vw;
+            right: 13.5vw;
+            width: 7vw;
+            height: 2.5vw;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 공모소식 페이지 -->
+    <div class="competition_page sub_page">
+        <img src="asset/images/subpage_sample/competition_page_sample0.jpg" alt="공모소식페이지_샘플" />
+        <a href="index.html" class="home"></a>
+        <button class="album"></button>
+        <button class="list"></button>
+        <button class="info_album"></button>
+        <button class="info_list"></button>
+        <button class="viewList"></button>
+    </div>
+
+    <!-- Main js -->
+    <!-- <script src="asset/js/main.js"></script> -->
+
+    <script>
+        const albumBtn = document.querySelector('button.album');
+        const listBtn = document.querySelector('button.list');
+        const infoAlbumBtn = document.querySelector('button.info_album');
+        const infoListBtn = document.querySelector('button.info_list');
+        const viewListBtn = document.querySelector('button.viewList');
+        const pageSample = document.querySelector('.sub_page img');
+        infoListBtn.style.display = 'none';
+        viewListBtn.style.display = 'none';
+
+        albumBtn.addEventListener('click', () => {
+            infoAlbumBtn.style.display = 'block';
+            infoListBtn.style.display = 'none';
+            pageSample.src = 'asset/images/subpage_sample/competition_page_sample0.jpg';
+        });
+        listBtn.addEventListener('click', () => {
+            infoAlbumBtn.style.display = 'none';
+            infoListBtn.style.display = 'block';
+            pageSample.src = 'asset/images/subpage_sample/competition_page_sample1.jpg';
+        });
+        infoAlbumBtn.addEventListener('click', () => {
+            pageSample.src = 'asset/images/subpage_sample/competition_page_sample2.jpg';
+            infoAlbumBtn.style.display = 'none';
+            albumBtn.style.display = 'none';
+            listBtn.style.display = 'none';
+            viewListBtn.style.display = 'block';
+        });
+        infoListBtn.addEventListener('click', () => {
+            pageSample.src = 'asset/images/subpage_sample/competition_page_sample2.jpg';
+            infoListBtn.style.display = 'none';
+            albumBtn.style.display = 'none';
+            listBtn.style.display = 'none';
+            viewListBtn.style.display = 'block';
+        });
+        viewListBtn.addEventListener('click', () => {
+            pageSample.src = 'asset/images/subpage_sample/competition_page_sample0.jpg';
+            listBtn.style.display = 'block';
+            albumBtn.style.display = 'block';
+            infoAlbumBtn.style.display = 'block';
+            viewListBtn.style.display = 'none';
+        });
+        
+    </script>
+
+</body>
+</html>

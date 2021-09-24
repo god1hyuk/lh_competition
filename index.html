@@ -10,6 +10,8 @@
     <!-- Common -->
     <!-- Font -->
     <link rel="stylesheet" href="asset/css/font.css" />
+    <!-- Swiper -->
+    <link rel="stylesheet" href="asset/css/swiper-bundle.min.css" />
     <!-- Style -->
     <link rel="stylesheet" href="asset/css/style.css" />
     <!-- AOS -->
@@ -59,10 +61,10 @@
                     </ul>
                     <ul class="main_menu">
                         <li>
-                            <a href="aboutus.html">About Us</a>
+                            <a href="javascript:void(0);" id="modal_on">About Us</a>
                         </li>
                         <li>
-                            <a href="">Competition</a>
+                            <a href="competition_page.html">Competition</a>
                         </li>
                         <li>
                             <a href="winner_page.html">Winner</a>
@@ -114,7 +116,7 @@
                             <div class="goWinner_btn"></div>
                         </div>
                     </a>
-                    <button>
+                    <button onclick="location.href='competition_page.html'">
                         <img src="asset/images/icon/competitionView_icon.png" alt="공모바로가기버튼_아이콘" />
                         Competition View
                         <img src="asset/images/icon/buttonArrow_white.png" alt="화살표_아이콘" />
@@ -122,10 +124,48 @@
                 </div>
             </div>
 
+            <!-- About Us -->
+            <div class="aboutUs modal_bg">
+                <button id="modal_close">
+                    <img src="asset/images/icon/close_black.png" alt="닫기_버튼" />
+                </button>
+                <!-- About Us 슬라이더 -->
+                <div class="swiper aboutUs_slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="text_wrap">
+                                <h1>2022년 LH 건축 설계공모 홈페이지가<br />새롭게 개설되었습니다.</h1>
+                            </div>
+                            <img src="asset/images/aboutus0.jpg" alt="AboutUs_슬라이더1" />
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="text_wrap">
+                                <h1>LH 건축 설계공모 관련정보에 대한 투명한 정보공개와<br />효율적 업무추진이 가능합니다.</h1>
+                            </div>
+                            <img src="asset/images/aboutus1.jpg" alt="AboutUs_슬라이더2" />
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="text_wrap">
+                                <h1>LH 설계공모부터 심사결과 공개까지 공모관련<br />업무전반이 온라인으로 진행됩니다.</h1>
+                            </div>
+                            <img src="asset/images/aboutus2.jpg" alt="AboutUs_슬라이더3" />
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="text_wrap">
+                                <h1>LH는 국토의 미래가치와<br />국민의 행복주거를 약속합니다.</h1>
+                            </div>
+                            <img src="asset/images/aboutus3.jpg" alt="AboutUs_슬라이더4" />
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>                
+
             <!-- 캘린더팝업 -->
             <div class="modal_bg">
                 <div class="calendarPop">
-                    <button class="modal_close">
+                    <button id="modal_close">
                         <img src="asset/images/icon/close_white.png" alt="팝업닫기_버튼" />
                     </button>
                     <img src="asset/images/calendar_sample.jpg" alt="캘린더팝업_샘플"/>
@@ -170,7 +210,7 @@
             </div>
         </div>
 
-        <!-- 아카이빙 -->
+        <!-- Archiving -->
         <div class="archiving" data-aos="fade-in" data-aos-duration="2000">
             <h1>ARCHIVING</h1>
             <button class="more_btn">
@@ -306,6 +346,8 @@
         </select>
     </footer>
 
+    <!-- Swiper js -->
+    <script src="asset/js/swiper-bundle.min.js"></script>
     <!-- Main js -->
     <script src="asset/js/main.js"></script>
     <!-- AOS -->

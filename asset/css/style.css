@@ -394,7 +394,7 @@ body::-webkit-scrollbar {
     background: rgba(0, 0, 0, 0.5);
     visibility: hidden;
     opacity: 0;
-    transition: all .3s;
+    transition: all .5s;
 }
 .modal_bg.active {
     visibility: visible;
@@ -405,10 +405,6 @@ body::-webkit-scrollbar {
     top: 40px;
     left: 50%;
     transform: translateX(-50%);
-    width: 60.1156vw;
-}
-.main_page .calendarPop img {
-    width: 100%;
 }
 .main_page .calendarPop button {
     position: absolute;
@@ -501,7 +497,7 @@ body::-webkit-scrollbar {
     background-color: #9dc912;
 }
 
-/* 아카이빙 */
+/* Archiving */
 .main_page .archiving {
     position: relative;
     margin-top: 13.6626vw;
@@ -657,22 +653,27 @@ footer select {
     padding: 0 1.2086vw;
 }
 
-/* About Us 페이지 */
-.aboutUs_page {
-    position: relative;
-    overflow-y: hidden;
-    width: 100vw;
-    height: 100vh;
+/* About Us */
+.aboutUs {
+    overflow-y: hidden !important;
+    z-index: 20;
 }
-.aboutUs_page .swiper {
+.aboutUs #modal_close {
+    position: absolute;
+    top: 35px;
+    right: 40px;
+    background: transparent;
+    z-index: 11;
+}
+.aboutUs .swiper {
     position: absolute;
     width: 100%;
     height: 100%;
 }
-.aboutUs_page .swiper-slide {
+.aboutUs .swiper-slide {
     overflow: hidden;
 }
-.aboutUs_page .swiper-slide img {
+.aboutUs .swiper-slide img {
     transform: scale(1.2);
 }
 .swiper-button-next:after, 
@@ -683,7 +684,7 @@ footer select {
 .swiper-container-rtl .swiper-button-next:after {
     content: url(../images/icon/sliderPrev.png);
 }
-.aboutUs_page .text_wrap {
+.aboutUs .text_wrap {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -691,18 +692,12 @@ footer select {
     background: rgba(0, 0, 0, 0.25);
     z-index: 3;
 }
-.aboutUs_page .text_wrap h1 {
-    line-height: 55px;
+.aboutUs .text_wrap h1 {
+    line-height: 65px;
     font-family: 'NanumSquareR';
-    font-size: 42px;
+    font-size: 50px;
     color: #fff;
     text-align: center;
     padding: 75px 0;
     text-shadow: 0px 0px 12.22px rgba(0, 0, 0, 0.7);
-}
-
-/* 공모결과 페이지 */
-.winner_page img {
-    width: 100vw;
-    margin-top: 20px;
 }
