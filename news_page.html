@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LH 설계공모</title>
+    <!-- Reset -->
+    <link rel="stylesheet" href="asset/css/_reset_v7.0.4.css" />
+    <!-- Common -->
+    <!-- Font -->
+    <link rel="stylesheet" href="asset/css/font.css" />
+    <!-- Style -->
+    <link rel="stylesheet" href="asset/css/style.css" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="asset/images/logo/android_LH.png" />
+    <link rel="apple-touch-icon-precomposed" href="asset/images/logo/apple_LH.png" />
+    <link rel="apple-touch-icon" href="asset/images/logo/apple_LH.png" />
+    <link rel="apple-touch-startup-image" href="asset/images/logo/apple_LH.png" />
+    <style>
+        
+        a, button {
+            position: absolute;
+            background: transparent;
+        }
+        a.home {
+            display: block;
+            top: 1.0417vw;
+            left: 1.3021vw;
+            width: 7.8125vw;
+            height: 3.6458vw;
+        }
+        button.album {
+            top: 25vw;
+            right: 20.2083vw;
+            width: 5.4688vw;
+            height: 2.6042vw;
+        }
+        button.list {
+            top: 25vw;
+            right: 14.5833vw;
+            width: 5.4688vw;
+            height: 2.6042vw;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- News 페이지 -->
+    <div class="news_page sub_page">
+        <img src="asset/images/subpage_sample/news_page_sample0.jpg" alt="새소식페이지_샘플" />
+        <a href="index.html" class="home"></a>
+        <button class="album"></button>
+        <button class="list"></button>
+    </div>
+
+    <!-- Main js -->
+    <!-- <script src="asset/js/main.js"></script> -->
+
+    <script>
+        const albumBtn = document.querySelector('button.album');
+        const listBtn = document.querySelector('button.list');
+        const pageSample = document.querySelector('.sub_page img');
+
+        albumBtn.addEventListener('click', () => {
+            pageSample.src = 'asset/images/subpage_sample/news_page_sample0.jpg';
+        });
+        listBtn.addEventListener('click', () => {
+            pageSample.src = 'asset/images/subpage_sample/news_page_sample1.jpg';
+        });
+
+        
+    </script>
+
+</body>
+</html>

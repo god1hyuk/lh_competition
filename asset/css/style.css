@@ -701,3 +701,7 @@ footer select {
     padding: 75px 0;
     text-shadow: 0px 0px 12.22px rgba(0, 0, 0, 0.7);
 }
+
+.sub_page img {
+    width: 100vw;
+}

@@ -1,70 +1,70 @@
-// // 인트로 페이지
-// const loadingPage = document.querySelector('.loading_page');
-// const introLogo = document.querySelector('.loading_page .logo');
+// 인트로 페이지
+const loadingPage = document.querySelector('.loading_page');
+const introLogo = document.querySelector('.loading_page .logo');
 
-// setTimeout(() => {
-//     introLogo.style.transition = 'opacity 1s';
-//     introLogo.style.opacity = 1;
+setTimeout(() => {
+    introLogo.style.transition = 'opacity 1s';
+    introLogo.style.opacity = 1;
 
-//     // 타이핑 효과
-//     let typingBool = false;
-//     let typingIndex = 0;
-//     let typingText = document.querySelector('.typing_text').textContent;
-//     const typingFx = document.querySelector('.typing');
-//     typingText = typingText.split(''); 
+    // 타이핑 효과
+    let typingBool = false;
+    let typingIndex = 0;
+    let typingText = document.querySelector('.typing_text').textContent;
+    const typingFx = document.querySelector('.typing');
+    typingText = typingText.split(''); 
 
-//     setTimeout(() => {
-//         if (typingBool == false) {
-//             typingBool = true;
-//             var typingInt = setInterval(typing, 120);
-//         }
+    setTimeout(() => {
+        if (typingBool == false) {
+            typingBool = true;
+            var typingInt = setInterval(typing, 120);
+        }
 
-//         function typing () {
-//             if (typingIndex < typingText.length) {
-//                 typingFx.append(typingText[typingIndex]);
-//                 typingIndex++;
-//             } else if (typingIndex == typingText.length) {
-//                 clearInterval(typingInt);
-//                 setTimeout(() => {
-//                     makeLoader(101, loader, '#f27214');
-//                     loader.style.opacity = 1;
-//                 }, 500);
-//             }
-//         }
+        function typing () {
+            if (typingIndex < typingText.length) {
+                typingFx.append(typingText[typingIndex]);
+                typingIndex++;
+            } else if (typingIndex == typingText.length) {
+                clearInterval(typingInt);
+                setTimeout(() => {
+                    makeLoader(101, loader, '#f27214');
+                    loader.style.opacity = 1;
+                }, 500);
+            }
+        }
 
-//         // 로더
-//         const loader = document.querySelector('.loader');
-//         const progressNum = document.querySelector('.loader .inner');
-//         loader.style.transition = 'opacity .5s';
-//         loader.style.opacity = 0;
+        // 로더
+        const loader = document.querySelector('.loader');
+        const progressNum = document.querySelector('.loader .inner');
+        loader.style.transition = 'opacity .5s';
+        loader.style.opacity = 0;
 
-//         const makeLoader = (percent, classname, color) => {
-//             let i = 0;
-//             let loaderFn = setInterval(function () {
-//                 if (i < percent) {
-//                     colorFn(i, classname, color);
-//                     progressNum.textContent = i + " %";
-//                     i++;
-//                 } else {
-//                     clearInterval(loaderFn);
-//                     setTimeout(() => {
-//                         loadingPage.style.transition = 'opacity 1s';
-//                         loadingPage.style.opacity = 0;
-//                     }, 500);
-//                     setTimeout(() => {
-//                         location.href = 'index.html';
-//                     }, 2000);
-//                 }
-//             }, 50);
-//         }
+        const makeLoader = (percent, classname, color) => {
+            let i = 0;
+            let loaderFn = setInterval(function () {
+                if (i < percent) {
+                    colorFn(i, classname, color);
+                    progressNum.textContent = i + " %";
+                    i++;
+                } else {
+                    clearInterval(loaderFn);
+                    setTimeout(() => {
+                        loadingPage.style.transition = 'opacity 1s';
+                        loadingPage.style.opacity = 0;
+                    }, 500);
+                    setTimeout(() => {
+                        location.href = 'index.html';
+                    }, 2000);
+                }
+            }, 50);
+        }
 
-//         const colorFn = (i, classname, color) => {
-//             classname.style.background = 'conic-gradient(' + color + ' 0%' + i + '%, #ececec ' + i + '% 100%)';
-//         }
+        const colorFn = (i, classname, color) => {
+            classname.style.background = 'conic-gradient(' + color + ' 0%' + i + '%, #ececec ' + i + '% 100%)';
+        }
 
-//     }, 1000);
+    }, 1000);
 
-// }, 1000);
+}, 1000);
 
 // 팝업
 const body = document.body;
@@ -72,7 +72,7 @@ const modal = document.querySelectorAll('.modal_bg');
 const modal_on = document.querySelectorAll('#modal_on');
 const modal_close = document.querySelectorAll('#modal_close');
 
-function modalControl(specialModal) {
+function modalControl(specialModal, modalInit) {
     for (let i=0; i<modal.length; i++) {
         modal_on[i].addEventListener('click', function () {
             body.style.overflow = 'hidden';
@@ -82,7 +82,7 @@ function modalControl(specialModal) {
         modal_close[i].addEventListener('click', function () {
             body.style.overflow = 'visible';
             modal[i].classList.remove('active');
-            specialModal();
+            modalInit();
         });
     }
 }
@@ -201,7 +201,11 @@ for (let i=0; i<arch_li.length; i++) {
 
 // About Us
 const aboutUs = document.querySelector('.aboutUs');
-// 여기서부터
+const aboutUsClose = document.querySelector('.aboutUs_close');
+aboutUsClose.addEventListener('click', () => {
+    swiper.realIndex = 0;
+    console.log(swiper.realIndex);
+});
 function aboutUsOn() {
     if (aboutUs.classList.contains('active')) {
         blackBar();
@@ -213,6 +217,12 @@ function aboutUsOn() {
         aboutUsTxt[swiper.realIndex].style.opacity = 0;
     }
 }
+function aboutUsInit () {
+    swiper.realIndex = 0;
+    aboutUsImg[swiper.realIndex].style.transform = 'scale(1.2)';
+    aboutUsBar[swiper.realIndex].style.opacity = 0;
+    aboutUsTxt[swiper.realIndex].style.opacity = 0;
+}
 modalControl(aboutUsOn);
 const aboutUsImg = document.querySelectorAll('.swiper-slide img');
 const aboutUsBar = document.querySelectorAll('.swiper-slide > .text_wrap');
@@ -221,7 +231,6 @@ for (let i=0; i<aboutUsImg.length; i++) {
     aboutUsBar[i].style.opacity = 0;
     aboutUsTxt[i].style.opacity = 0;
 }
-
 const swiper = new Swiper('.aboutUs_slider', {
     speed: 2000,
     effect: 'fade',
@@ -231,6 +240,7 @@ const swiper = new Swiper('.aboutUs_slider', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+
 });
 swiper.navigation.nextEl.addEventListener('click', () => {
     zoomOut();
