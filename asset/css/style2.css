@@ -364,7 +364,7 @@ body::-webkit-scrollbar {
 }
 
 /* 메인 슬라이더 */
-.main_page .slider_container {
+.main_slider {
     position: absolute;
     top: 0;
     width: 100%;
@@ -372,7 +372,7 @@ body::-webkit-scrollbar {
     overflow: hidden;
     z-index: 0;
 }
-.main_page .slider_wrapper {
+.main_slider .slider_wrapper {
     display: flex;
     flex-direction: row-reverse;
     /* justify-content: space-between; */
@@ -385,7 +385,7 @@ body::-webkit-scrollbar {
     width: 597.9169vw;
     transition: right 1.2s;
 }
-.main_page .slider_item {
+.main_slider .slider_item {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -398,7 +398,7 @@ body::-webkit-scrollbar {
     background: salmon;
     overflow: hidden;
 }
-.main_page .sliderBtn {
+.main_slider .sliderBtn {
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -406,19 +406,19 @@ body::-webkit-scrollbar {
     right: 0;
     width: 71.5104vw;
 }
-.main_page .sliderBtn button {
+.main_slider .sliderBtn button {
     width: 0.9375vw;
     background-color: transparent;
     border: none;
     margin: 0 2.0833vw;
 }
-.main_page .sliderBtn button img {
+.main_slider .sliderBtn button img {
     transition: transform .13s;
 }
-.main_page .sliderBtn button:hover img {
+.main_slider .sliderBtn button:hover img {
     transform: scale(1.2);
 }
-.main_page .sPagination {
+.main_slider .sPagination {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -427,20 +427,20 @@ body::-webkit-scrollbar {
     padding-bottom: 1.5625vw;
     border-bottom: 3px solid #232937;
 }
-.main_page .sPagination > span {
+.main_slider .sPagination > span {
     width: 0.8333vw;
     height: 0.8333vw;
     margin-left: 0.8333vw;
     background: #d4d7e0;
     border-radius: 100%;
 }
-.main_page .sPagination > span:hover {
+.main_slider .sPagination > span:hover {
     cursor: pointer !important;
 }
-.main_page .sPagination > span:last-child {
+.main_slider .sPagination > span:last-child {
     margin-right: 0;
 }
-.main_page .sPagination span.active {
+.main_slider .sPagination span.active {
     background-color: #9dc912;
 }
 
