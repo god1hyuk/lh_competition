@@ -1,4 +1,3 @@
-
 // 메인 페이지
 
 // 메인 슬라이더
@@ -50,3 +49,9 @@ $(document).ready(function () {
         }
     });
 });
+
+// Archiving
+let arch_li = document.querySelectorAll('.arch_list .bg');
+for (let i=0; i<arch_li.length; i++) {
+    arch_li[i].style.backgroundImage = 'url(asset/images/archiving' + i + '.jpg)';
+};

@@ -11,7 +11,10 @@
     <!-- Font -->
     <link rel="stylesheet" href="asset/css/font.css" />
     <!-- Swiper -->
-    <link rel="stylesheet" href="asset/css/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="asset/css/swiper-bundle.min.css" /> -->
+    <!-- Slick  -->
+    <link rel="stylesheet" href="asset/css/slick.css" />
+    <link rel="stylesheet" href="asset/css/slick-theme.css" />
     <!-- Style -->
     <link rel="stylesheet" href="asset/css/style2.css" />
     <!-- AOS -->
@@ -183,30 +186,30 @@
     
         <!-- 메인 슬라이더 -->
         <div class="slider_container main_slider" data-aos="fade-right" data-aos-duration="1300">
-            <ul class="slider_wrapper">
-                <li class="slider_item active" data-value="0">
-                    <img src="asset/images/main_slider0.jpg" alt="메인슬라이더_이미지1" />
-                </li>
-                <li class="slider_item" data-value="1">
-                    <img src="asset/images/main_slider1.jpg" alt="메인슬라이더_이미지2" />
-                </li>
-                <li class="slider_item" data-value="2">
-                    <img src="asset/images/main_slider2.jpg" alt="메인슬라이더_이미지3" />
-                </li>
-                <li class="slider_item" data-value="3">
-                    <img src="asset/images/main_slider3.jpg" alt="메인슬라이더_이미지4" />
-                </li>
-                <li class="slider_item" data-value="4">
-                    <img src="asset/images/main_slider4.jpg" alt="메인슬라이더_이미지5" />
-                </li>
-            </ul>
-            <div class="sliderBtn">
-                <button id="sliderPrev">
-                    <img src="asset/images/icon/sliderPrev.png" alt="이전슬라이드" />
-                </button>
-                <button id="sliderNext">
-                    <img src="asset/images/icon/sliderNext.png" alt="다음슬라이드" />
-                </button>
+            <div class="slider_wrapper" dir="rtl">
+                <div>
+                    <img src="asset/images/main_slider0.jpg" alt="" />
+                </div>
+                <div>
+                    <img src="asset/images/main_slider1.jpg" alt="" />
+                </div>
+                <div>
+                    <img src="asset/images/main_slider2.jpg" alt="" />
+                </div>
+                <div>
+                    <img src="asset/images/main_slider3.jpg" alt="" />
+                </div>
+                <div>
+                    <img src="asset/images/main_slider4.jpg" alt="" />
+                </div>
+            </div>
+            <div class="slider_arrow">
+                <span class="prev" id="slider_prev">
+                    <img src="asset/images/icon/sliderPrev.png" alt="이전_이미지" />
+                </span>
+                <span class="next" id="slider_next">
+                    <img src="asset/images/icon/sliderNext.png" alt="다음_이미지" />
+                </span>
             </div>
         </div>
 
@@ -361,10 +364,26 @@
     <!-- jQuery -->
     <script src="asset/js/jquery-1.12.4.min.js"></script>
     <!-- Swiper -->
-    <script src="asset/js/swiper-bundle.min.js"></script>
+    <!-- <script src="asset/js/swiper-bundle.min.js"></script> -->
+    <!-- Slick -->
+    <script src="asset/js/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.main_slider .slider_wrapper').slick({
+                infinite: true,
+                rtl: true,
+                speed: 1200,
+                prevArrow: $('#slider_prev'),
+		        nextArrow: $('#slider_next'),
+                dots: true,
+                cssEase: 'ease-out'
+            });
+        }); 
+    </script>
     <!-- Main js -->
     <!-- <script src="asset/js/main.js"></script> -->
     <script src="asset/js/main2.js"></script>
+
     <!-- AOS -->
     <script src="asset/js/aos.min.js"></script>
     <script>
@@ -379,5 +398,6 @@
             }
         });
     </script>
+    
 </body>
 </html>

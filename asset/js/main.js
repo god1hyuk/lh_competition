@@ -214,7 +214,7 @@ $(function() {
 });
 
 // Archiving
-const arch_li = document.querySelectorAll('.arch_list li');
+let arch_li = document.querySelectorAll('.arch_list li');
 for (let i=0; i<arch_li.length; i++) {
     arch_li[i].style.backgroundImage = 'url(asset/images/archiving' + i + '.jpg)';
 };

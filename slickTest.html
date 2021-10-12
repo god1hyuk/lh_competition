@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slick Test</title>
+    <!-- Slick  -->
+    <link rel="stylesheet" href="asset/css/slick.css" />
+    <link rel="stylesheet" href="asset/css/slick-theme.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        *, *::after, *::before {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'NotoSansKR-Regular';
+            /* overflow-y: overlay; */
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-repeat: no-repeat;
+            transition: background .1s;
+        }
+        button:hover {
+            cursor: pointer;
+        }
+        /* 스크롤바 */
+        body::-webkit-scrollbar {
+            /* display: none; */
+        } 
+        .scroll::-webkit-scrollbar {
+            width: 0.2604vw;
+            background-color: #2d3342;
+            border-radius: 100px;
+        }
+        .scroll::-webkit-scrollbar-thumb {
+            background: #5d626d;
+            border-radius: 100px;
+        }
+        .scroll::-webkit-scrollbar,
+        .scroll::-webkit-scrollbar-thumb {
+            overflow: visible;
+        }
+        .scrollBar {
+            position: absolute;
+            top: 0;
+            width: 0.2604vw;
+            height: 100%;
+            opacity: 1;
+            transition: opacity .1s;
+        }
+        :hover + .scrollBar {
+            opacity: 0;
+        }
+
+        /* 메인 페이지 */
+        .main_page {
+            width: 100%;
+        }
+        .main_page header {
+            position: relative;
+            width: 27.6042vw;
+            /* height: 50.4688vw; */
+            height: 20.6771vw;
+            z-index: 1;
+        }
+        /* 메인 페이지 메뉴 */
+        .main_page nav {
+            display: flex;
+            width: 27.6042vw;
+        }
+        .main_page nav .nav_left {
+            width: 13.6979vw;
+        }
+        .main_page nav .nav_right {
+            width: 13.9063vw;
+        }
+        .main_page nav .logo {
+            margin-top: 1.875vw;
+            margin-left: 2.6042vw;
+        }
+        .main_page nav .logo img {
+            width: 7.0313vw;
+        }
+        .main_page nav .sub_menu {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-top: 3.6458vw;
+        }
+        .main_page nav .sub_menu button {
+            display: flex;
+            align-items: center;
+        }
+        .main_page nav .sub_menu .facebook {
+            width: 12px;
+            height: 19px;
+            background-image: url(../images/icon/facebook_icon.png);
+            background-position: center;
+            background-size: 100%;
+            background-color: transparent;
+            border: none;
+        }
+        .main_page nav .sub_menu .facebook:hover {
+            background-image: url(../images/icon/facebook_icon_on.png);
+        }
+        .main_page nav .language {
+            margin-left: 1.0417vw;
+        }
+        .main_page nav .language button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.2917vw;
+            height: 1.7708vw;
+            font-size: 13px;
+            color: #fff;
+            background: #9dc912;
+            border: none;
+        }
+        .main_page nav .language button:hover {
+            background: #9abe0a;
+        }
+        .main_page nav .nav_right ul {
+            padding-right: 1.8229vw;
+        }
+        .main_page nav .top_menu {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            font-size: 13px;
+            margin-top: 0.8854vw;
+        }
+        .main_page nav .top_menu li:not(:last-child) {
+            margin-right: 15px;
+        }
+        .main_page nav .top_menu a {
+            display: flex;
+            align-items: center;
+            transition: all .1s;
+        }
+        .main_page nav .top_menu a:hover {
+            color: #9dc912;
+        }
+        .main_page nav .myPageIcon {
+            width: 12px;
+            height: 13px;
+            margin-right: 5px;
+            background-image: url(../images/icon/myPage_icon.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            transition: background .1s;
+        }
+        .main_page nav li:last-child a:hover .myPageIcon {
+            background-image: url(../images/icon/myPage_icon_on.png);
+        }
+        .main_page nav .main_menu {
+            text-align: right;
+            font-family: 'NanumSquareEB';
+            font-size: 1.0417vw;
+            margin-top: 6.25vw;
+        }
+        .main_page nav .main_menu li:not(:last-child) {
+            margin-bottom: 1.7708vw;
+        }
+        .main_page nav .main_menu a {
+            transition: color .1s;
+        }
+        .main_page nav .main_menu a:hover {
+            color: #f27214;
+        }
+
+        .main_slider {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            /* height: 50.4688vw; */
+            height: 100vh;
+            overflow: hidden;
+            z-index: 0;
+        }
+        .main_slider .slider_wrapper {
+            position: relative;
+            height: 100vh;
+            overflow-y: hidden;
+        }
+        .main_slider .slick-slide img {
+            transform: translate(13.6979vw, 10.9896vw);
+            width: 71.5104vw;
+            margin-left: auto;
+        }
+        .main_slider .slick-slide.slick-current img {
+            transform: translate(0);
+            transition: all .3s;
+        }
+        .main_slider .slick-dots {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            top: 20.6771vw;
+            bottom: auto;
+            left: 13.6979vw;
+            width: 12.3958vw;
+            padding-bottom: 1.5625vw;
+            border-bottom: 3px solid #202532;
+            z-index: 5 !important;
+        }
+        .main_slider .slick-dots > li {
+            width: 0.8333vw;
+            height: 0.8333vw;
+            margin: 0;
+        }
+        .main_slider .slick-dots > li:not(:last-child) {
+            margin-right: 0.8333vw;
+        }
+        .main_slider .slick-dots > li:hover button:before {
+            background: #a5cb0b;
+        }
+        .main_slider .slick-dots > li.slick-active button:before {
+            background: #a5cb0b;
+        }
+        .main_slider .slick-dots li button {
+            width: 0.8333vw;
+            height: 0.8333vw;
+        }
+        .main_slider .slick-dots li button:before {
+            content: '';
+            width: 0.8333vw;
+            height: 0.8333vw;
+            background: #d4d7e0;
+            border-radius: 100%;
+            opacity: 1;
+        }
+        .main_slider .slider_arrow {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 20.2083vw;
+            right: 0;
+            width: 71.5104vw;
+        }
+        .main_slider .slider_arrow span {
+            margin: 0px 2.0833vw;
+            transition: transform .2s;
+        }
+        .main_slider .slider_arrow span:hover {
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 메인 페이지 -->
+    <div class="main_page">
+
+        <!-- 메인 페이지 헤더 -->
+        <header>
+            <!-- 메인 페이지 메뉴 -->
+            <nav>
+                <div class="nav_left">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="asset/images/logo/main_logo.png" alt="LH_로고" />
+                        </a>
+                    </div>
+                    <ul class="sub_menu">
+                        <li>
+                            <button class="facebook"></button>
+                        </li>
+                        <li class="language">
+                            <button>ENG</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav_right">
+                    <ul class="top_menu">
+                        <li>
+                            <a href="">로그인</a>
+                        </li>
+                        <li>
+                            <a href="">회원가입</a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="myPageIcon"></div>
+                                마이페이지
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="main_menu">
+                        <li>
+                            <a href="competition_page.html">공모소식</a>
+                        </li>
+                        <li>
+                            <a href="winner_page.html">공모결과</a>
+                        </li>
+                        <li>
+                            <a href="news_page.html">새소식</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">자료실</a>
+                        </li>
+                    </ul>
+                    <div class="sPagination">
+                        <span class="active" data-value="0"></span>
+                        <span data-value="1"></span>
+                        <span data-value="2"></span>
+                        <span data-value="3"></span>
+                        <span data-value="4"></span>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        
+        <!-- 메인 슬라이더 -->
+        <div class="slider_container main_slider">
+            <div class="slider_wrapper" dir="rtl">
+                <div>
+                    <img src="asset/images/main_slider0.jpg" alt="" />
+                </div>
+                <div>
+                    <img src="asset/images/main_slider1.jpg" alt="" />
+                </div>
+                <div>
+                    <img src="asset/images/main_slider2.jpg" alt="" />
+                </div>
+                <div>
+                    <img src="asset/images/main_slider3.jpg" alt="" />
+                </div>
+                <div>
+                    <img src="asset/images/main_slider4.jpg" alt="" />
+                </div>
+            </div>
+            <div class="slider_arrow">
+                <span class="prev" id="slider_prev">
+                    <img src="asset/images/icon/sliderPrev.png" alt="이전_이미지" />
+                </span>
+                <span class="next" id="slider_next">
+                    <img src="asset/images/icon/sliderNext.png" alt="다음_이미지" />
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script src="asset/js/jquery-1.12.4.min.js"></script>
+    <script src="asset/js/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.slider_wrapper').slick({
+                infinite: true,
+                rtl: true,
+                speed: 1200,
+                prevArrow: $('#slider_prev'),
+		        nextArrow: $('#slider_next'),
+                dots: true,
+                cssEase: 'ease-out'
+            });
+        }); 
+    </script>
+</body>
+</html>
