@@ -368,12 +368,6 @@ body::-webkit-scrollbar {
     top: 0;
     width: 100%;
     height: 50.4688vw;
-    overflow: hidden;
-    z-index: 0;
-}
-.main_slider .slider_wrapper {
-    position: relative;
-    overflow-y: hidden;
 }
 .main_slider .slick-slide {
     width: 71.5104vw;
@@ -398,7 +392,6 @@ body::-webkit-scrollbar {
     width: 12.3958vw;
     padding-bottom: 1.5625vw;
     border-bottom: 3px solid #202532;
-    z-index: 9 !important;
 }
 .main_slider .slick-dots > li {
     width: 0.8333vw;
