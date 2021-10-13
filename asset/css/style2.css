@@ -60,7 +60,6 @@ body::-webkit-scrollbar {
     width: 100%;
 }
 .main_page header {
-    position: relative;
     width: 27.6042vw;
     height: 50.4688vw;
     z-index: 1;
@@ -68,7 +67,9 @@ body::-webkit-scrollbar {
 /* 메인 페이지 메뉴 */
 .main_page nav {
     display: flex;
+    position: relative;
     width: 27.6042vw;
+    z-index: 8;
 }
 .main_page nav .nav_left {
     width: 13.6979vw;
@@ -175,12 +176,13 @@ body::-webkit-scrollbar {
 /* 메인 페이지 공모 정보박스 */
 .main_page .compt_infoBox {
     display: flex;
-    position: absolute;
+    position: relative;
     bottom: -7.2917vw;
     /* bottom: 0; */
     left: 5.4167vw;
     width: 58.5417vw;
     color: #fff;
+    z-index: 10;
 }
 /* 메인 페이지 공모 마감일정 */
 .main_page .compt_infoBox .d_day {
@@ -362,7 +364,7 @@ body::-webkit-scrollbar {
 .main_page .calendarPop button img {
     width: 100%;
 }
-
+/* 메인 슬라이더 */
 .main_slider {
     position: absolute;
     top: 0;
@@ -375,12 +377,13 @@ body::-webkit-scrollbar {
 }
 .main_slider .slick-slide img {
     transform: translate(13.6979vw, 10.9896vw);
+    /* transform: translateY(10.9896vw); */
     width: 71.5104vw;
     margin-left: auto;
+    transition: transform 1.3s;
 }
 .main_slider .slick-slide.slick-current img {
     transform: translate(0);
-    transition: all .3s;
 }
 .main_slider .slick-dots {
     display: flex;

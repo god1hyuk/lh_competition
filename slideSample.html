@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asset/css/slideSample.css" />
+    <title>Slide Sample</title>
+</head>
+<body>
+    
+    <div class="main_page">
+
+        <!-- 메인 페이지 슬라이더 -->
+        <div class="slider_container main_slider" data-aos="fade-right" data-aos-duration="1300">
+            <ul class="slider_wrapper">
+                <li class="slider_item 0" data-value="0">
+                    <img src="asset/images/main_slider0.jpg" alt="메인슬라이더_이미지1" />
+                </li>
+                <li class="slider_item 1" data-value="1">
+                    <img src="asset/images/main_slider1.jpg" alt="메인슬라이더_이미지2" />
+                </li>
+                <li class="slider_item 2" data-value="2">
+                    <img src="asset/images/main_slider2.jpg" alt="메인슬라이더_이미지3" />
+                </li>
+                <li class="slider_item 3" data-value="3">
+                    <img src="asset/images/main_slider3.jpg" alt="메인슬라이더_이미지4" />
+                </li>
+                <li class="slider_item 4 " data-value="4">
+                    <img src="asset/images/main_slider4.jpg" alt="메인슬라이더_이미지5" />
+                </li>
+            </ul>
+            <div class="sliderBtn">
+                <button id="sliderPrev">
+                    <img src="asset/images/icon/sliderPrev.png" alt="이전슬라이드" />
+                </button>
+                <button id="sliderNext">
+                    <img src="asset/images/icon/sliderNext.png" alt="다음슬라이드" />
+                </button>
+            </div>
+            <div class="sPagination">
+                <span data-value="0"></span>
+                <span data-value="1"></span>
+                <span data-value="2"></span>
+                <span data-value="3"></span>
+                <span data-value="4"></span>
+            </div>
+        </div>
+    </div>
+    <script src="asset/js/slideSample.js"></script>
+</body>
+</html>

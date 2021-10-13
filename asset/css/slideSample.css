@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+
+/* 메인 슬라이더 */
+.main_slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 50.4688vw; */
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+}
+.main_slider .slider_wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 800%;
+    transition: right 1.3s;
+}
+.main_slider .slider_item {
+    display: flex;
+    width: 100%;
+    height: 50.4688vw;
+    transform: translateY(10.9896vw);
+    transition: all 1.3s;
+}
+.main_slider .slider_item img {
+    transform: translateX(13.9063vw);
+    width: 71.5104vw;
+    margin-left: auto;
+}
+.main_slider .slider_current {
+    transform: translate(0);
+}
+.main_slider .slider_current img {
+    transform: translate(0);
+    transition: transform 1.3s;
+}
+.main_slider .sliderBtn {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 40%;
+    right: 0;
+    width: 71.5104vw;
+}
+.main_slider .sliderBtn button {
+    width: 0.8854vw;
+    margin: 0 2.0833vw;
+    background-color: transparent;
+    border: none;
+    transition: transform .13s;
+}
+.main_slider .sliderBtn button img {
+    width: 100%;
+}
+.main_slider .sliderBtn button:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.main_slider .sPagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    left: 13.9063vw;
+    margin-top: 2.6274vw;
+    width: 12.454vw;
+    padding-bottom: 1.5765vw;
+    border-bottom: 3px solid #232937;
+}
+.main_slider .sPagination > span {
+    width: 0.8408vw;
+    height: 0.8408vw;
+    margin-left: 0.8408vw;
+    background: #d4d7e0;
+    border-radius: 100%;
+}
+.main_slider .sPagination > span:hover {
+    cursor: pointer !important;
+}
+.main_slider .sPagination > span:last-child {
+    margin-right: 0;
+}
+.main_slider .sPagination span.active {
+    background-color: #9dc912;
+}

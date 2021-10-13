@@ -1,70 +1,70 @@
-// 인트로 페이지
-const loadingPage = document.querySelector('.loading_page');
-const introLogo = document.querySelector('.loading_page .logo');
+// // 인트로 페이지
+// const loadingPage = document.querySelector('.loading_page');
+// const introLogo = document.querySelector('.loading_page .logo');
 
-setTimeout(() => {
-    introLogo.style.transition = 'opacity 1s';
-    introLogo.style.opacity = 1;
+// setTimeout(() => {
+//     introLogo.style.transition = 'opacity 1s';
+//     introLogo.style.opacity = 1;
 
-    // 타이핑 효과
-    let typingBool = false;
-    let typingIndex = 0;
-    let typingText = document.querySelector('.typing_text').textContent;
-    const typingFx = document.querySelector('.typing');
-    typingText = typingText.split(''); 
+//     // 타이핑 효과
+//     let typingBool = false;
+//     let typingIndex = 0;
+//     let typingText = document.querySelector('.typing_text').textContent;
+//     const typingFx = document.querySelector('.typing');
+//     typingText = typingText.split(''); 
 
-    setTimeout(() => {
-        if (typingBool == false) {
-            typingBool = true;
-            var typingInt = setInterval(typing, 120);
-        }
+//     setTimeout(() => {
+//         if (typingBool == false) {
+//             typingBool = true;
+//             var typingInt = setInterval(typing, 120);
+//         }
 
-        function typing () {
-            if (typingIndex < typingText.length) {
-                typingFx.append(typingText[typingIndex]);
-                typingIndex++;
-            } else if (typingIndex == typingText.length) {
-                clearInterval(typingInt);
-                setTimeout(() => {
-                    makeLoader(101, loader, '#f27214');
-                    loader.style.opacity = 1;
-                }, 500);
-            }
-        }
+//         function typing () {
+//             if (typingIndex < typingText.length) {
+//                 typingFx.append(typingText[typingIndex]);
+//                 typingIndex++;
+//             } else if (typingIndex == typingText.length) {
+//                 clearInterval(typingInt);
+//                 setTimeout(() => {
+//                     makeLoader(101, loader, '#f27214');
+//                     loader.style.opacity = 1;
+//                 }, 500);
+//             }
+//         }
 
-        // 로더
-        const loader = document.querySelector('.loader');
-        const progressNum = document.querySelector('.loader .inner');
-        loader.style.transition = 'opacity .5s';
-        loader.style.opacity = 0;
+//         // 로더
+//         const loader = document.querySelector('.loader');
+//         const progressNum = document.querySelector('.loader .inner');
+//         loader.style.transition = 'opacity .5s';
+//         loader.style.opacity = 0;
 
-        const makeLoader = (percent, classname, color) => {
-            let i = 0;
-            let loaderFn = setInterval(function () {
-                if (i < percent) {
-                    colorFn(i, classname, color);
-                    progressNum.textContent = i + " %";
-                    i++;
-                } else {
-                    clearInterval(loaderFn);
-                    setTimeout(() => {
-                        loadingPage.style.transition = 'opacity 1s';
-                        loadingPage.style.opacity = 0;
-                    }, 500);
-                    setTimeout(() => {
-                        location.href = 'index.html';
-                    }, 2000);
-                }
-            }, 50);
-        }
+//         const makeLoader = (percent, classname, color) => {
+//             let i = 0;
+//             let loaderFn = setInterval(function () {
+//                 if (i < percent) {
+//                     colorFn(i, classname, color);
+//                     progressNum.textContent = i + " %";
+//                     i++;
+//                 } else {
+//                     clearInterval(loaderFn);
+//                     setTimeout(() => {
+//                         loadingPage.style.transition = 'opacity 1s';
+//                         loadingPage.style.opacity = 0;
+//                     }, 500);
+//                     setTimeout(() => {
+//                         location.href = 'index.html';
+//                     }, 2000);
+//                 }
+//             }, 50);
+//         }
 
-        const colorFn = (i, classname, color) => {
-            classname.style.background = 'conic-gradient(' + color + ' 0%' + i + '%, #ececec ' + i + '% 100%)';
-        }
+//         const colorFn = (i, classname, color) => {
+//             classname.style.background = 'conic-gradient(' + color + ' 0%' + i + '%, #ececec ' + i + '% 100%)';
+//         }
 
-    }, 1000);
+//     }, 1000);
 
-}, 1000);
+// }, 1000);
 
 // 팝업
 const body = document.body;
@@ -122,8 +122,17 @@ itemAll[0].style.transform = 'translateY(0)';
 sliderItem[0].style.transform = 'translateY(0)';
 sliderItem[curIndex].style.opacity = 0;
 
+console.log(curIndex);
+
 sliderNext.addEventListener('click', function () {
+    // 다중클릭 방지
+    this.setAttribute('disabled', 'disabled');
+    setTimeout(function () {
+        sliderNext.removeAttribute('disabled');
+    }, 1300);
+
     curIndex++;
+    console.log(curIndex);
 
     for (let i=0; i<pagination.length; i++) {
         pagination[i].classList.remove('active');
@@ -141,6 +150,8 @@ sliderNext.addEventListener('click', function () {
     if (curIndex > itemAll.length-2) {
         setTimeout(function () {
             curIndex = -1;
+            console.log(curIndex);
+            alert("changed");
             for (item in sliderItem) {
                 sliderItem[item].style.transition = 'all 0s';
                 sliderItem[item].style.opacity = 1;
@@ -149,13 +160,21 @@ sliderNext.addEventListener('click', function () {
             sliderWrapper.style.transition = 'right 0s';
             sliderItem[curIndex+1].style.transform = 'translateY(0)';
             sliderWrapper.style.right = -(itemAll[0].offsetWidth) * (curIndex + 1) + 'px';
+
         }, 1200);
     }
 
 });
 
 sliderPrev.addEventListener('click', function () {
+    // 다중클릭 방지
+    this.setAttribute('disabled', 'disabled');
+    setTimeout(function () {
+        sliderPrev.removeAttribute('disabled');
+    }, 1300);
+
     curIndex--;
+    console.log(curIndex);
 
     for (let i=0; i<pagination.length; i++) {
         pagination[i].classList.remove('active');
@@ -175,13 +194,11 @@ sliderPrev.addEventListener('click', function () {
     sliderItem[curIndex+2].style.transform = 'translateY(11.0878vw)';
     
     if (curIndex < 0) {
-
         pagination[pagination.length-1].classList.add('active');
-
         setTimeout(function () {
             curIndex = itemAll.length-1;
-            
             console.log(curIndex);
+            alert("changed");
             for (item in sliderItem) {
                 sliderItem[item].style.transform = 'translateY(0)';
             }
@@ -190,9 +207,13 @@ sliderPrev.addEventListener('click', function () {
             sliderWrapper.style.right = -(itemAll[0].offsetWidth + itemMarginLeft) * (curIndex + 1) + 'px';
             sliderItem[curIndex+2].style.transform = 'translateY(11.0878vw)';
             sliderItem[curIndex].style.opacity = 1;
+            // sliderNext.addEventListener('click', function () {    
+            //     curIndex = 0;
+            //     console.log(curIndex);
+            //     alert('changed');
+            // });
         }, 1200);
     }
-    
 });
 
 $(function() {
