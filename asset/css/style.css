@@ -68,10 +68,11 @@ body::-webkit-scrollbar {
 .main_page nav {
     display: flex;
     position: relative;
+    width: 100%;
     z-index: 8;
 }
 .main_page nav .nav_left {
-    width: 13.9063vw;
+    width: 13.6979vw;
 }
 .main_page nav .nav_right {
     width: 13.9063vw;
@@ -123,7 +124,7 @@ body::-webkit-scrollbar {
     background: #9abe0a;
 }
 .main_page nav .nav_right ul {
-    padding-right: 1.8229vw;
+    padding-right: 1.5625vw;
 }
 .main_page nav .top_menu {
     display: flex;
@@ -133,7 +134,7 @@ body::-webkit-scrollbar {
     margin-top: 0.8854vw;
 }
 .main_page nav .top_menu li:not(:last-child) {
-    margin-right: 15px;
+    margin-right: 0.7813vw;
 }
 .main_page nav .top_menu a {
     display: flex;
@@ -392,7 +393,7 @@ body::-webkit-scrollbar {
     transition: all 1.3s;
 }
 .main_slider .slider_item img {
-    transform: translateX(13.9063vw);
+    transform: translateX(13.6979vw);
     width: 71.5104vw;
     margin-left: auto;
 }
@@ -431,8 +432,9 @@ body::-webkit-scrollbar {
     justify-content: flex-end;
     position: absolute;
     top: 20.6771vw;
-    left: 13.9063vw;
-    width: 12.454vw;
+    left: 13.6979vw;
+    /* width: 12.454vw; */
+    width: 12.3438vw;
     padding-bottom: 1.5765vw;
     border-bottom: 3px solid #232937;
 }
