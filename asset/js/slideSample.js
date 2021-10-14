@@ -39,9 +39,10 @@ sliderNext.addEventListener('click', function () {
     sliderItem[curIndex].style.opacity = 0;
 
     if (curIndex === itemAll.length) {
+        curIndex = 0;
+        console.log(curIndex);
+        pagination[curIndex].className += 'active';
         setTimeout(function () {
-            curIndex = 0;
-            console.log(curIndex);
             sliderWrapper.style.transition = 'right 0s';
             sliderWrapper.style.right = -(itemAll[0].offsetWidth) * (curIndex + 1) + 'px';
             for (let i=0; i<sliderItem.length-1; i++) {
@@ -58,7 +59,6 @@ sliderNext.addEventListener('click', function () {
     for (let i=0; i<pagination.length; i++) {
         pagination[i].className = pagination[i].className.replace('active', '');
         pagination[i].style.transition = 'background .13s';
-        console.log(pagination[i].className);
     }
     pagination[curIndex].className += 'active';
 });
@@ -85,9 +85,10 @@ sliderPrev.addEventListener('click', function () {
     sliderItem[curIndex+1].className += ' slider_current';
 
     if (curIndex === -1) {
+        curIndex = itemAll.length-1;
+        console.log(curIndex);
+        pagination[curIndex].className += 'active';
         setTimeout(function() {            
-            curIndex = itemAll.length-1;
-            console.log(curIndex);
             sliderWrapper.style.transition = 'right 0s';
             sliderWrapper.style.right = -(itemAll[0].offsetWidth) * (curIndex + 1) + 'px';
             for (let i=0; i<sliderItem.length-1; i++) {
@@ -104,7 +105,23 @@ sliderPrev.addEventListener('click', function () {
     for (let i=0; i<pagination.length; i++) {
         pagination[i].className = pagination[i].className.replace('active', '');
         pagination[i].style.transition = 'background .13s';
-        console.log(pagination[i].className);
     }
-    pagination[curIndex + 1].className += 'active';
+    pagination[curIndex].className += 'active';
+});
+
+// 페이지네이션 클릭 시 이동
+$(function() {
+    $(pagination).click(function () {
+        $(pagination).removeClass('active');
+        $(this).addClass('active');
+        curIndex = $(this).data('value');
+        sliderWrapper.style.transition = 'right 1.3s';
+        sliderWrapper.style.right = -(itemAll[0].offsetWidth) * (curIndex + 1) + 'px';
+        for (let i=0; i<sliderItem.length-1; i++) {
+            sliderItem[i].className = sliderItem[i].className.replace(' slider_current', '');
+            sliderItem[i].style.opacity = 1;
+        }
+        sliderItem[curIndex+1].className += ' slider_current';
+        sliderItem[curIndex].style.opacity = 0;
+    });
 });
