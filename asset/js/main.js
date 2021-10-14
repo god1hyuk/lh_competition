@@ -128,6 +128,15 @@ $(function() {
     });
 });
 
+// 로드 시 메인 슬라이더 트랜지션 방지
+window.onload = function () {
+    sliderWrapper.style.transition = 'none';
+    for (let i=0; i<sliderItem.length; i++) {
+        sliderItem[i].style.transition = 'none';
+        sliderItem[i].firstElementChild.style.transition = 'none';
+    }
+}
+
 // Archiving
 let arch_li = document.querySelectorAll('.arch_list .bg');
 for (let i=0; i<arch_li.length; i++) {
