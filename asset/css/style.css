@@ -7,7 +7,7 @@
 }
 body {
     font-family: 'NotoSansKR-Regular';
-    /* overflow-y: overlay; */
+    overflow-y: overlay;
 }
 li {
     list-style: none;
@@ -56,10 +56,8 @@ body::-webkit-scrollbar {
 }
 
 /* 메인 페이지 */
-.main_page {
-    width: 100%;
-}
 .main_page header {
+    position: relative;
     width: 27.6042vw;
     height: 50.4688vw;
     z-index: 1;
@@ -67,7 +65,7 @@ body::-webkit-scrollbar {
 /* 메인 페이지 메뉴 */
 .main_page nav {
     display: flex;
-    position: relative;
+    position: absolute;
     width: 100%;
     z-index: 8;
 }
@@ -95,8 +93,8 @@ body::-webkit-scrollbar {
     align-items: center;
 }
 .main_page nav .sub_menu .facebook {
-    width: 12px;
-    height: 19px;
+    width: 0.625vw;
+    height: 0.9896vw;
     background-image: url(../images/icon/facebook_icon.png);
     background-position: center;
     background-size: 100%;
@@ -115,7 +113,7 @@ body::-webkit-scrollbar {
     justify-content: center;
     width: 2.2917vw;
     height: 1.7708vw;
-    font-size: 13px;
+    font-size: 0.6771vw;
     color: #fff;
     background: #9dc912;
     border: none;
@@ -130,7 +128,7 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    font-size: 13px;
+    font-size: 0.6771vw;
     margin-top: 0.8854vw;
 }
 .main_page nav .top_menu li:not(:last-child) {
@@ -145,8 +143,8 @@ body::-webkit-scrollbar {
     color: #9dc912;
 }
 .main_page nav .myPageIcon {
-    width: 12px;
-    height: 13px;
+    width: 0.625vw;
+    height: 0.6771vw;
     margin-right: 5px;
     background-image: url(../images/icon/myPage_icon.png);
     background-repeat: no-repeat;
@@ -176,11 +174,9 @@ body::-webkit-scrollbar {
 /* 메인 페이지 공모 정보박스 */
 .main_page .compt_infoBox {
     display: flex;
-    position: relative;
-    /* bottom: -7.2917vw; */
-    bottom: -8.1771vw;
-    /* bottom: 0; */
-    left: 5.4167vw;
+    position: absolute;
+    bottom: -7.2917vw;
+    right: -36.3542vw;
     width: 58.5417vw;
     color: #fff;
     z-index: 10;
@@ -370,7 +366,7 @@ body::-webkit-scrollbar {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 50.4688vw;
     overflow: hidden;
     z-index: 0;
@@ -382,19 +378,19 @@ body::-webkit-scrollbar {
     position: absolute;
     top: 0;
     right: 0;
-    width: 800%;
+    width: 800vw;
     transition: right 1.3s;
 }
 .main_slider .slider_item {
     display: flex;
-    width: 100%;
+    width: 100vw;
     height: 50.4688vw;
     transform: translateY(10.9896vw);
     transition: all 1.3s;
 }
 .main_slider .slider_item img {
     transform: translateX(13.6979vw);
-    width: 71.5104vw;
+    width: 72.3958vw;
     margin-left: auto;
 }
 .main_slider .slider_current {
@@ -426,7 +422,7 @@ body::-webkit-scrollbar {
     transform: scale(1.2);
     cursor: pointer;
 }
-.main_slider .sPagination {
+.main_page .sPagination {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -437,21 +433,22 @@ body::-webkit-scrollbar {
     width: 12.3438vw;
     padding-bottom: 1.5765vw;
     border-bottom: 3px solid #232937;
+    z-index: 999;
 }
-.main_slider .sPagination > span {
+.main_page .sPagination > span {
     width: 0.8408vw;
     height: 0.8408vw;
     margin-left: 0.8408vw;
     background: #d4d7e0;
     border-radius: 100%;
 }
-.main_slider .sPagination > span:hover {
+.main_page .sPagination > span:hover {
     cursor: pointer !important;
 }
-.main_slider .sPagination > span:last-child {
+.main_page .sPagination > span:last-child {
     margin-right: 0;
 }
-.main_slider .sPagination span.active {
+.main_page .sPagination span.active {
     background-color: #9dc912;
 }
 

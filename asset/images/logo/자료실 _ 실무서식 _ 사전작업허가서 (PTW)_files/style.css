@@ -1,0 +1,29 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+body, td, p, input, button, textarea, select, .c1 { font-family:Nanum Gothic,±¼¸²; font-size:9pt; color:#353535; }
+
+a:link, a:visited, a:active { text-decoration:none; color:#466C8A; font-size:11px }
+a:hover { text-decoration:underline; }
+
+a.menu:link, a.menu:visited, a.menu:active { text-decoration:none; color:#454545; }
+a.menu:hover { text-decoration:none; }
+
+.member {font-weight:bold;color:#888888;}
+.guest  {font-weight:normal;color:#888888;}
+
+.lh { line-height: 150%; }
+.jt { text-align:justify; }
+
+.li { font-weight:bold; font-size:18px; vertical-align:-4px; color:#66AEAD; }
+
+.ul { list-style-type:square; color:#66AEAD; }
+
+.ct { font-family: Verdana, ±¼¸²; color:#353535; } 
+
+.ed { border:1px solid #CCCCCC; } 
+.tx { border:1px solid #CCCCCC; } 
+
+.c1 {background-color:94d7e7}
+.c2 {background-color:e7f3f7;font-weight:bold}
+
+.small { font-size:8pt; font-family:µ¸¿ò; }
+.cloudy, a.cloudy {color:#888888;} /* Èå¸² */

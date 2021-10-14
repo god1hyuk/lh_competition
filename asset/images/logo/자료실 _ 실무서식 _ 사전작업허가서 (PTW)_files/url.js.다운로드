@@ -1,0 +1,78 @@
+/****** m ¸µÅ© *****************/
+function m1() { location.href = "/home/bbs/board.php?bo_table=data01"; }
+function m2() { location.href = "/safe_product_list.htm"; }
+function m3() { location.href = "/safe_monthly_product_list.htm"; }
+function m4() { location.href = "/home/bbs/board.php?bo_table=news01"; }
+function m5() { location.href = "/safe_maker_company_list.htm"; }
+function m6() { location.href = "/safe_procedure_list.htm?bo_table=request"; }
+function m7() { location.href = "/home/shop/content.php?co_id=hazard"; }
+function m8() { location.href = "/home/bbs/board.php?bo_table=comm01"; }
+function m9() { location.href = "/pointmall.htm"; }
+function m10() { location.href = "/home/shop/content.php?co_id=member"; }
+function m16() { location.href = "/home/shop/content.php?co_id=KCS"; }
+
+function m1s1() { location.href = "/home/bbs/board.php?bo_table=data01"; }
+function m1s2() { location.href = "/home/bbs/board.php?bo_table=data02"; }
+function m1s3() { location.href = "/home/bbs/board.php?bo_table=data03"; }
+function m1s4() { location.href = "/home/bbs/board.php?bo_table=data04"; }
+function m1s5() { location.href = "/home/bbs/board.php?bo_table=data05"; }
+function m1s6() { location.href = "/home/bbs/board.php?bo_table=data06"; }
+function m1s7() { location.href = "/home/bbs/board.php?bo_table=data07"; }
+function m1s8() { location.href = "/home/bbs/board.php?bo_table=data08"; }
+function m1s9() { location.href = "/home/bbs/board.php?bo_table=data09"; }
+function m1s10() { location.href = "/home/bbs/board.php?bo_table=data10"; }
+function m1s11() { location.href = "/home/bbs/board.php?bo_table=data11"; }
+function m1s12() { location.href = "/home/bbs/board.php?bo_table=data12"; }
+function m1s13() { location.href = "/home/bbs/board.php?bo_table=data13"; }
+
+function m2s1() { location.href = "/home/bbs/board.php?bo_table=goods_review"; }
+
+function m3s1() { location.href = "/safe_monthly_product_list.htm"; }
+function m3s2() { location.href = "/safe_idea_product_list.htm"; }
+function m3s3() { location.href = "/home/bbs/board.php?bo_table=item03"; }
+function m3s4() { location.href = "/home/shop/content.php?co_id=idea"; }
+function m3s5() { location.href = "/safe_KCS_product_list.htm"; }
+function m3s6() { location.href = "/safe_CE_product_list.htm"; }
+function m3s7() { location.href = "/safe_nature_product_list.htm"; }
+function m3s8() { location.href = "/home/bbs/board.php?bo_table=con01"; }
+
+
+function m4s1() { location.href = "/home/bbs/board.php?bo_table=news01"; }
+function m4s2() { location.href = "/home/bbs/board.php?bo_table=new2"; }
+function m4s3() { location.href = "/home/bbs/board.php?bo_table=new3"; }
+function m4s4() { location.href = "/home/bbs/board.php?bo_table=news03"; }
+function m4s5() { location.href = "/home/bbs/board.php?bo_table=news05"; }
+function m4s6() { location.href = "/home/bbs/board.php?bo_table=etour"; }
+
+function m5s1() { location.href = "/safe_maker_company_list.htm?sub=s1&m=5&s=1"; }
+function m5s2() { location.href = "/safe_sale_company_list.htm?sub=s1&m=5&s=1"; }
+function m5s3() { location.href = "/safe_dsale_company_list.htm?sub=s1&m=5&s=1"; }
+function m5s4() { location.href = "/safe_construct_company_list.htm?sub=s1&m=5&s=1"; }
+function m5s5() { location.href = "/safe_etc_company_list.htm?sub=s1&m=5&s=1"; }
+function m5s6() { location.href = "/safe_hospital_list.htm?sub=s1&m=5&s=1"; }
+function m5s7() { location.href = "/safe_sale_info_list.htm?sub=s1&m=5&s=7"; }
+
+function m7s1() { location.href = "/home/shop/content.php?co_id=hazard"; }
+function m7s2() { location.href = "/home/shop/content.php?co_id=safe"; }
+function m7s3() { location.href = "/home/shop/content.php?co_id=safetycon"; }
+function m7s4() { location.href = "/home/bbs/write.php?bo_table=consulting"; }
+
+function m8s1() { location.href = "/home/bbs/board.php?bo_table=comm01"; }
+function m8s2() { location.href = "/home/bbs/board.php?bo_table=comm02"; }
+function m8s3() { location.href = "/home/bbs/board.php?bo_table=comm03"; }
+function m8s4() { location.href = "/home/bbs/board.php?bo_table=comm04"; }
+function m8s5() { location.href = "/home/bbs/board.php?bo_table=comm05"; }
+
+function m9s1() { location.href = "/home/shop/content.php?co_id=pointmall"; }
+function m9s2() { location.href = "/pointmall.htm"; }
+function m9s3() { location.href = "/home/bbs/board.php?bo_table=faq"; }
+
+function m10s1() { location.href = "/home/shop/content.php?co_id=member"; }
+function m10s2() { location.href = "/home/shop/content.php?co_id=memberfee"; }
+function m10s3() { location.href = "/home/shop/content.php?co_id=point"; }
+function m10s4() { location.href = "/home/shop/content.php?co_id=membervalue"; }
+
+
+function m11s1() { location.href = "/home/shop/content.php?co_id=KCS"; }
+function m11s2() { location.href = "/home/shop/content.php?co_id=CE"; }
+function m11s3() { location.href = "/home/shop/content.php?co_id=NT"; }

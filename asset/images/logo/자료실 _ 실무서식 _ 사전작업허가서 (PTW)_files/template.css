@@ -1,0 +1,75 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+/*********************************************
+* GLOBAL : Common : Product By wepas.com
+*********************************************/
+body { padding:0px ; margin:0 0 0 0;}
+body, table, tr, td, select, textarea, input 
+{
+scrollbar-face-color: #dddddd; 
+scrollbar-shadow-color: #aaaaaa; 
+scrollbar-highlight-color: #ffffff; 
+scrollbar-3dlight-color: #999999; 
+scrollbar-darkshadow-color: #999999; 
+scrollbar-track-color: #eeeeee; 
+scrollbar-arrow-color: #ffffff
+}
+table,td,SELECT,input,DIV,form,TEXTAREA,center,option,span,pre,br,P {font-family:Nanum Gothic,굴림;font:9pt;line-height:150%;color:666666}
+img,table {border:0} /* img , table border=0 */
+p {margin:0}
+
+/*********************************************
+* GLOBAL : Form
+*********************************************/
+.input		{border:1px solid #DADADA;  background-color:#FAFAFA;} /* 선택형 input tag*/
+.select		{border:1px solid #C2C2C2;}		/* 선택형 select tag*/
+.textarea	{border:1px solid #C2C2C2}		/* 선택형 textarea tag*/
+.input1		{border:1px solid #DADADA;} /* 선택형 input tag*/
+
+/*********************************************
+* GLOBAL : Contents
+*********************************************/
+.Cmargin	{padding:30 0 30 0}			/* 컨텐츠 마진 */
+.CmarginBoard{padding:0 14 0 14}			/* 컨텐츠 마진 */
+.Ctable		{width:670}						/* 컨텐츠 테이블 */
+.i10		{padding:0 0 0 10}				/* 1 depth 들여쓰기(Indent) */
+.i20		{padding:0 0 0 20}				/* 2 depth 들여쓰기(Indent) */
+.i30		{padding:0 0 0 30}				/* 3 depth 들여쓰기(Indent) */
+.i40		{padding:0 0 0 40}				/* 4 depth 들여쓰기(Indent) */
+.h10		{padding:10 0 0 0}				/* 1 depth 헤딩 마진 */
+.h20		{padding:20 0 0 0}				/* 2 depth 헤딩 마진 */
+.h30		{padding:30 0 0 0}				/* 3 depth 헤딩 마진 */
+.h40		{padding:40 0 0 0}				/* 4 depth 헤딩 마진 */
+.tbold	{color:336699;font-weight:bold;font-size:10pt} /* 라벨 1 depth 강조용 */
+.label02	{color:336699}					/* 라벨 2 depth 강조용 */
+.locate01	{font-family:Nanum Gothic,굴림; FONT-SIZE: 11px; color:#787169; padding:0 0 0 0;}	/* 현재위치 기본 */
+.locate02	{color:666666;font-size:8pt}					/* 현재위치 강조 */
+
+.btitle		{font-size:11pt;color:353535;font-weight:bold}
+.stitle		{font-size:11pt;color:8b915f;padding:0 0 0 10px;font-weight:bold}
+.stitleSub		{font-weight:bold;padding:5px 0 5px 20px;background-image:url('/images/stitle_bullet.gif');background-repeat:no-repeat;background-position:left;border-bottom:1px solid #eaeaea}
+.stitleBorder		{border-top:1px solid #e4e7cf;border-bottom:3px solid #e4e7cf;border-right:1px solid #e4e7cf;border-left:1px solid #e4e7cf}
+/*********************************************
+* GLOBAL : table(border)
+*********************************************/
+.bg0 {background-color:dadada} /* border */
+.bg1 {background-color:E8EEF5;} /* background 1 depth 강조 */
+.bg2 {background-color:F4F4F4;} /* background 2 depth 강조 */
+.bg3 {background-color:F0F0F0;padding-left:10px} /* background 3 depth 강조 */
+.bg4 {background-color:FDFDFD} /* background 4 depth 강조 */
+
+
+/*********************************************
+* GLOBAL : Link
+*********************************************/
+a:link {font-family:Nanum Gothic,굴림;font:9pt; color:#353535; text-decoration:none;word-spacing:-0.1em;letter-spacing:-0.0em;line-height:130%} /* Primary Link */
+a:visited {font-family:Nanum Gothic,굴림;font:9pt; color:#353535; text-decoration:none;word-spacing:-0.1em;letter-spacing:-0.0em;line-height:130%}
+a:hover {font-family:Nanum Gothic,굴림; font:9pt; color:#336600; text-decoration:none;word-spacing:-0.1em;letter-spacing:-0.0em;line-height:130%}
+
+a.stitleLink:link {font-family:Nanum Gothic,굴림;font:10pt; color:#353535; font-weight:bold} /* Primary Link */
+a.stitleLink:visited {font-family:Nanum Gothic,굴림;font:10pt; color:#353535;font-weight:bold}
+a.stitleLink:hover {font-family:Nanum Gothic,굴림; font:10pt; color:#336600; font-weight:bold}
+
+.link01 {font-family:Nanum Gothic,굴림;font-size:9pt; color:#333333; text-decoration:none;word-spacing:-0.1em;letter-spacing:-0.1em;} /* Secondary Link */
+a.link01:link {font-family:Nanum Gothic,굴림;font-size:9pt; color:#333333; text-decoration:none;word-spacing:-0.1em;letter-spacing:-0.1em;} /* Secondary Link */
+a.link01:visited {font-family:Nanum Gothic,굴림;font-size:9pt; color:#333333; text-decoration:none;word-spacing:-0.1em;letter-spacing:-0.1em;}
+a.link01:hover {font-family:Nanum Gothic,굴림; font-size:9pt; color:#336600; text-decoration:none;word-spacing:-0.1em;letter-spacing:-0.1em;}
