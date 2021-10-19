@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LH 설계공모</title>
-    <!-- Reset -->
-    <link rel="stylesheet" href="asset/css/_reset_v7.0.4.css" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="asset/images/logo/android_LH.png" />
+    <link rel="apple-touch-icon-precomposed" href="asset/images/logo/apple_LH.png" />
+    <link rel="apple-touch-icon" href="asset/images/logo/apple_LH.png" />
+    <link rel="apple-touch-startup-image" href="asset/images/logo/apple_LH.png" />
     <!-- Common -->
     <!-- Font -->
     <link rel="stylesheet" href="asset/css/font.css" />
@@ -14,18 +17,16 @@
     <link rel="stylesheet" href="asset/css/swiper-bundle.min.css" />
     <!-- Style -->
     <link rel="stylesheet" href="asset/css/style.css" />
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="asset/images/logo/android_LH.png" />
-    <link rel="apple-touch-icon-precomposed" href="asset/images/logo/apple_LH.png" />
-    <link rel="apple-touch-icon" href="asset/images/logo/apple_LH.png" />
-    <link rel="apple-touch-startup-image" href="asset/images/logo/apple_LH.png" />
 </head>
 <body>
 
-    <!-- About Us 페이지 -->
-    <div class="intro_page">
+    <!-- About Us -->
+    <div class="aboutUs">
+        <button id="modal_close" class="aboutUs_close">
+            <img src="asset/images/icon/close_black.png" alt="닫기_버튼" />
+        </button>
         <!-- About Us 슬라이더 -->
-        <div class="swiper aboutUs">
+        <div class="swiper aboutUs_slider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="text_wrap">
@@ -55,26 +56,11 @@
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
         </div>
-    </div>
+    </div>   
 
     <!-- Swiper js -->
     <script src="asset/js/swiper-bundle.min.js"></script>
-    <!-- Initialize Swiper -->
-    <script>
-        const aboutUsSlider = new Swiper(".aboutUs", {
-            spaceBetween: 30,
-            effect: "fade",
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-        });
-    </script>
     <!-- Main js -->
-    <!-- <script src="asset/js/main.js"></script> -->
+    <script src="asset/js/main.js"></script>
 </body>
 </html>
