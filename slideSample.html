@@ -1,54 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="asset/css/">
-    <link rel="stylesheet" href="asset/css/slideSample.css" />
+    <link rel="stylesheet" href="asset/css/swiper.min.css" />
     <title>Slide Sample</title>
+    <style>
+        /* 메인 슬라이더 */
+        img {
+            display: block;
+        }
+        .main_slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50.4688vw;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .main_slider .swiper-slide {
+            position: relative;
+            height: 50.4688vw;
+        }
+
+        .main_slider .swiper-slide>div {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 72.3958vw;
+            overflow: hidden;
+            margin-left: auto;
+            opacity: 1;
+            transition: all 1.3s;
+        }
+        
+        .main_slider .swiper-slide-prev>div {
+            opacity: 0;
+        }
+
+        .main_slider .swiper-slide-next>div {
+            top: 10.9896vw;
+            right: -13.6979vw;
+            opacity: 1;
+        }
+        
+        .main_slider .swiper-slide-active>div {
+            top: 0;
+            right: 0;
+            opacity: 1;
+            transition: all 1.3s;
+        }
+
+        .main_slider .swiper-button {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: rotate(180deg);
+            width: 72%;
+            z-index: 1;
+        }
+        .main_slider .swiper-button div {
+            transition: transform .13s;
+        }
+        .main_slider .swiper-button div:hover {
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+
+        /* .main_slider .sliderBtn button {
+            width: 0.8854vw;
+            margin: 0 2.0833vw;
+            background-color: transparent;
+            border: none;
+            transition: transform .13s;
+        } */
+
+        /* .main_slider .sliderBtn button img {
+            width: 100%;
+        } */
+
+        /* .main_slider .sliderBtn button:hover {
+            transform: scale(1.2);
+            cursor: pointer;
+        } */
+
+        /* .main_page .sPagination {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            position: absolute;
+            top: 20.6771vw;
+            left: 13.6979vw;
+            width: 12.3438vw;
+            padding-bottom: 1.5765vw;
+            border-bottom: 0.1563vw solid #232937;
+            z-index: 700;
+        }
+
+        .main_page .sPagination>span {
+            width: 0.8408vw;
+            height: 0.8408vw;
+            margin-left: 0.8408vw;
+            background: #d4d7e0;
+            border-radius: 100%;
+        }
+
+        .main_page .sPagination>span:hover {
+            cursor: pointer !important;
+        }
+
+        .main_page .sPagination>span:last-child {
+            margin-right: 0;
+        }
+
+        .main_page .sPagination span.active {
+            background-color: #9dc912;
+        } */
+    </style>
 </head>
+
 <body>
-    
+
     <div class="main_page">
 
         <!-- 메인 페이지 슬라이더 -->
-        <div class="slider_container main_slider" data-aos="fade-right" data-aos-duration="1300">
-            <ul class="slider_wrapper">
-                <li class="slider_item 0" data-value="0">
-                    <img src="asset/images/main_slider0.jpg" alt="메인슬라이더_이미지1" />
-                </li>
-                <li class="slider_item 1" data-value="1">
-                    <img src="asset/images/main_slider1.jpg" alt="메인슬라이더_이미지2" />
-                </li>
-                <li class="slider_item 2" data-value="2">
-                    <img src="asset/images/main_slider2.jpg" alt="메인슬라이더_이미지3" />
-                </li>
-                <li class="slider_item 3" data-value="3">
-                    <img src="asset/images/main_slider3.jpg" alt="메인슬라이더_이미지4" />
-                </li>
-                <li class="slider_item 4 " data-value="4">
-                    <img src="asset/images/main_slider4.jpg" alt="메인슬라이더_이미지5" />
-                </li>
-            </ul>
-            <div class="sliderBtn">
-                <button id="sliderPrev">
-                    <img src="asset/images/icon/sliderPrev.png" alt="이전슬라이드" />
-                </button>
-                <button id="sliderNext">
-                    <img src="asset/images/icon/sliderNext.png" alt="다음슬라이드" />
-                </button>
+        <div class="swiper main_slider" dir="rtl">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <img src="asset/images/main_slider0.jpg" alt="메인슬라이더_이미지1" />
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <img src="asset/images/main_slider1.jpg" alt="메인슬라이더_이미지2" />
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <img src="asset/images/main_slider2.jpg" alt="메인슬라이더_이미지3" />
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <img src="asset/images/main_slider3.jpg" alt="메인슬라이더_이미지4" />
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <img src="asset/images/main_slider4.jpg" alt="메인슬라이더_이미지5" />
+                    </div>
+                </div>
             </div>
-            <div class="sPagination">
-                <span data-value="0"></span>
-                <span data-value="1"></span>
-                <span data-value="2"></span>
-                <span data-value="3"></span>
-                <span data-value="4"></span>
+            <div class="swiper-button">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
     </div>
-    <script src="asset/js/jquery-1.12.4.min.js"></script>
-    <script src="asset/js/slideSample.js"></script>
+
+    <script src="asset/js/swiper.min.js"></script>
+    <script>
+        var swiperItem = document.querySelectorAll(".main_slider .swiper-slide");
+        var swiper = new Swiper(".main_slider", {
+            loop: true,
+            speed: 1300,
+            loopedSlides: 2,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
 </body>
+
 </html>

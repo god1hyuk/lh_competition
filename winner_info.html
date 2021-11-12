@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="asset/images/logo/android_LH.png" />
+    <link rel="apple-touch-icon-precomposed" href="asset/images/logo/apple_LH.png" />
+    <link rel="apple-touch-icon" href="asset/images/logo/apple_LH.png" />
+    <link rel="apple-touch-startup-image" href="asset/images/logo/apple_LH.png" />
+    <!-- Reset -->
+    <link rel="stylesheet" href="asset/css/_reset_v7.0.4.css" />
+    <!-- Common -->
+    <link rel="stylesheet" href="asset/css/common.css" />
+    <!-- Font -->
+    <link rel="stylesheet" href="asset/css/font.css" />
+    <!-- AOS -->
+    <link rel="stylesheet" href="asset/css/aos.min.css" />
+    <!-- Style -->
+    <link rel="stylesheet" href="asset/css/style.css" />
+    <title>LH 설계공모</title>
+</head>
+<body>
+    <!-- 서브페이지 공모소식 상세정보 -->
+    <div class="winner_info sub_page post">
+        <!-- 서브페이지 헤더 -->
+        <header data-aos="fade-down" data-aos-duration="1000">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="asset/images/logo/main_logo.png" alt="로고_이미지" />
+                </a>
+            </div>
+            <nav>
+                <ul class="main_menu">
+                    <li><a href="competition_page.html">공모소식</a></li>
+                    <li><a href="winner_page.html">공모결과</a></li>
+                    <li><a href="news_page.html">새소식</a></li>
+                    <li><a href="download.html">자료실</a></li>
+                </ul>
+            </nav>
+            <div class="nav_right">
+                <ul class="sub_menu">
+                    <li>
+                        <button class="facebook"></button>
+                    </li>
+                    <li>
+                        <button class="language">ENG</button>
+                    </li>
+                </ul>
+                <ul class="account_menu">
+                    <li>
+                        <a href="javascript:void(0);" class="login">
+                            <div class="icon"></div>
+                            로그인
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <!-- 서브페이지 타이틀 배너 -->
+        <section class="title_banner">
+            <div class="banner_left"></div>
+            <div class="banner_right" data-aos="fade-in" data-aos-duration="2000">
+                <div class="title_wrap">
+                    <div class="title">
+                        <h2>WINNER</h2>
+                        <h1>공모결과</h1>
+                    </div>
+                    <div class="descript">
+                        <p>LH 설계공모 결과를 확인<br/>하실 수 있습니다.</p>
+                    </div>
+                    <div class="icon" data-aos="fade-right" data-aos-duration="1200"></div>
+                </div>
+                <div class="title_bg"></div>
+            </div>
+            <ul class="current_page" data-aos="fade-in" data-aos-delay="300" data-aos-duration="1200">
+                <li>
+                    <a href="index.html" class="home"></a>
+                </li>
+                <img src="asset/images/icon/list_arrow.png" alt="화살표_아이콘" />
+                <li>
+                    <a href="winner_page.html">
+                        Winner
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <!-- 탑 버튼 -->
+        <a href="#top" class="top_btn">
+            <img src="asset/images/icon/top_btn.png" alt="TOP버튼_아이콘" />
+            TOP
+        </a>
+
+        <div class="main_content">
+            <div class="info_title">
+                <h3>성남판교대장지구 A-10BL 공동주택 설계공모</h3>
+                <button class="backToList" onclick="location.href='competition_page.html'">
+                    목록보기
+                    <img src="asset/images/icon/lightgray_arrow.png" alt="화살표_아이콘" />
+                </button>
+            </div>
+            <div class="attend_wrap">
+                <ul>
+                    <li>신혼희망타운</li>
+                    <li>경기도 성남시 분당구 대장동 160</li>
+                    <li>참가신청 <span>12</span> 명</li>
+                </ul>
+                <div class="wrapper">
+                    <button class="bookmark_btn">
+                        <div class="icon"></div>
+                        북마크
+                    </button>
+                </div>
+            </div>
+            <ul class="scroll_index">
+                <li>
+                    <button>
+                        <div class="icon"></div>
+                        개요
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <div class="icon"></div>
+                        일정
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <div class="icon"></div>
+                        심사위원
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <div class="icon"></div>
+                        공지사항
+                    </button>
+                </li>
+                <li>
+                    <button class="accordion_btn">
+                        <div class="icon"></div>
+                        당선작
+                    </button>
+                    <ul class="acc_content tab_index">
+                        <li class="active">
+                            <button data-tab="tab0">1등작</button>
+                        </li>
+                        <li>
+                            <button data-tab="tab1">2등작</button>
+                        </li>
+                        <li>
+                            <button data-tab="tab2">3등작</button>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="winner_infoList info_list">
+                <li id="scroll_index0">
+                    <h4>
+                        <img src="asset/images/icon/compt_infoList_icon.png" alt="타이틀_아이콘" />
+                        개요
+                    </h4>
+                    <ul class="sIndex_list">
+                        <li>
+                            <h5>
+                                <div class="icon"></div>
+                                공모제목
+                            </h5>
+                            <p>성남판교대장지구 A-10BL 공동주택 설계공모</p>
+                        </li>
+                        <li>
+                            <h5>
+                                <div class="icon"></div>
+                                공모범위
+                            </h5>
+                            <ul>
+                                <li>
+                                    <h6>위치</h6>
+                                    <p>
+                                        경기도 성남시 분당구 대장동 160
+                                        <button>
+                                            지도로 위치보기
+                                            <img src="asset/images/icon/lightgray_arrow.png" alt="화살표_아이콘" /> 
+                                        </button>
+                                    </p>
+                                </li>
+                                <li>
+                                    <h6>연면적</h6>
+                                    <p>137,645.55㎡</p>
+                                </li>
+                                <li>
+                                    <h6>유형</h6>
+                                    <p>신혼희망타운</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h5>
+                                <div class="icon"></div>
+                                설계용역비
+                            </h5>
+                            <p>4,597백만원</p>
+                        </li>
+                        <li>
+                            <h5>
+                                <div class="icon"></div>
+                                목표공사비
+                            </h5>
+                            <p>246,396백만원</p>
+                        </li>
+                    </ul>
+                </li>
+                <li id="scroll_index1">
+                    <h4>
+                        <img src="asset/images/icon/compt_infoList_icon.png" alt="타이틀_아이콘" />
+                        일정
+                    </h4>
+                    <ul class="sIndex_list">
+                        <li>
+                            <h5>
+                                <div class="icon"></div>
+                                시행공고
+                            </h5>
+                            <p>2021-01-12 00:00 ~ 2021-01-12 00:00</p>
+                        </li>
+                        <li>
+                            <h5>
+                                <div class="icon"></div>
+                                참가등록
+                            </h5>
+                            <p>
+                                2021-01-12 00:00 ~ 2021-01-12 00:00
+                                <span>
+                                    ※ 참가등록 구비서류 제출<br/> 
+                                    &emsp;- 제출시기 : 2021.01.20(수) 10:00 ~ 17:00 (12:00~13:00 점심시간 제외)<br/>
+                                    &emsp;- 제출 방법 : 직접 제출<br/>
+                                    &emsp;- 제출 장소 : LH 본사 내 지정장소<br/>
+                                    &emsp;- 구비서류 목록 : 설계공모 지침서 참조
+                                </span>
+                            </p>
+                        </li>
+                        <li>
+                            <h5>
+                                <div class="icon"></div>
+                                질의접수
+                            </h5>
+                            <p>2021-01-13 00:00 ~ 2021-01-25 18:00</p>
+                        </li>
+                        <li>
+                            <h5>
+                                <div class="icon"></div>
+                                질의응답
+                            </h5>
+                            <p>2021-01-29 13:00 ~ 2021-01-29 18:00</p>
+                        </li>
+                        <li>
+                            <h5>
+                                <div class="icon"></div>
+                                작품접수 마감
+                            </h5>
+                            <p>2021-01-13 00:00 ~ 2021-01-25 18:00</p>
+                        </li>
+                        <li>
+                            <h5>
+                                <div class="icon"></div>
+                                당선작 발표
+                            </h5>
+                            <p>2021-01-29 13:00 ~ 2021-01-29 18:00</p>
+                        </li>
+                    </ul>
+                </li>
+                <li id="scroll_index2">
+                    <h4>
+                        <img src="asset/images/icon/compt_infoList_icon.png" alt="타이틀_아이콘" />
+                        심사위원
+                    </h4>
+                    <ul class="sIndex_list">
+                        <li>
+                            <h5>이명재</h5>
+                            <ul>
+                                <li>
+                                    <h6>학력</h6>
+                                    <p>한국교통대학교</p>
+                                </li>
+                                <li>
+                                    <h6>주요경력</h6>
+                                    <p>건축학석사 / 독일연방건축사</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h5>이명재</h5>
+                            <ul>
+                                <li>
+                                    <h6>학력</h6>
+                                    <p>한국교통대학교</p>
+                                </li>
+                                <li>
+                                    <h6>주요경력</h6>
+                                    <p>건축학석사 / 독일연방건축사</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li id="scroll_index3">
+                    <h4>
+                        <img src="asset/images/icon/compt_infoList_icon.png" alt="타이틀_아이콘" />
+                        공지사항
+                    </h4>
+                    <ul class="accordion">
+                        <li>
+                            <button class="accordion_btn">
+                                <h5>
+                                    <strong>1.</strong>
+                                    [중요] 현장설명회 참석 여부 설문
+                                </h5>
+                                <img src="asset/images/icon/arrow_accordion.png" alt="화살표_아이콘" />
+                            </button>
+                            <div class="acc_content">
+                                <p>
+                                    원활한 현장설명회 진행을 위하여 아래 설문에 필히 참여해주시기 바랍니다.
+                                    <a class="link" href="javascript:void(0);">
+                                        https://goo.gl/forms/ZcEe3RzH9NeP6K3D3
+                                    </a>
+                                </p>
+                                <div class="attached">
+                                    <div class="title_wrap">
+                                        <h6>
+                                            <img src="asset/images/icon/clip_black.png" alt="첨부파일_아이콘" />
+                                            첨부파일<strong>1개</strong>
+                                        </h6>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:void(0);" download>
+                                                <div class="icon"></div>
+                                                현장설명회 참석 여부 설문 URL.txt
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <button class="accordion_btn">
+                                <h5>
+                                    <strong>2.</strong>
+                                    자료2.3_정수탑 도면 자료 추가
+                                </h5>
+                                <img src="asset/images/icon/arrow_accordion.png" alt="화살표_아이콘" />
+                            </button>
+                            <div class="acc_content">
+                                <p>
+                                    내용입니다.
+                                    <a class="link" href="javascript:void(0);">
+                                        https://goo.gl/forms/ZcEe3RzH9NeP6K3D3
+                                    </a>
+                                </p>
+                                <div class="attached">
+                                    <div class="title_wrap">
+                                        <h6>
+                                            <img src="asset/images/icon/clip_black.png" alt="첨부파일_아이콘" />
+                                            첨부파일<strong>1개</strong>
+                                        </h6>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:void(0);" download>
+                                                <div class="icon"></div>
+                                                자료2.3_정수탑 도면 자료.txt
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <button class="accordion_btn">
+                                <h5>
+                                    <strong>3.</strong>
+                                    자료2.3_정수탑 도면 자료 추가
+                                </h5>
+                                <img src="asset/images/icon/arrow_accordion.png" alt="화살표_아이콘" />
+                            </button>
+                            <div class="acc_content">
+                                <p>
+                                    내용입니다.
+                                    <a class="link" href="javascript:void(0);">
+                                        https://goo.gl/forms/ZcEe3RzH9NeP6K3D3
+                                    </a>
+                                </p>
+                                <div class="attached">
+                                    <div class="title_wrap">
+                                        <h6>
+                                            <img src="asset/images/icon/clip_black.png" alt="첨부파일_아이콘" />
+                                            첨부파일<strong>1개</strong>
+                                        </h6>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:void(0);" download>
+                                                <div class="icon"></div>
+                                                자료2.3_정수탑 도면 자료.txt
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="white_btn">
+                        More
+                        <img src="asset/images/icon/more_black.png" alt="More_아이콘" />
+                        <p><strong>10</strong> / <span>15</span></p>
+                    </button>
+                </li>
+                <li id="scroll_index4">
+                    <h4>
+                        <img src="asset/images/icon/compt_infoList_icon.png" alt="타이틀_아이콘" />
+                        당선작
+                        <strong><span>1</span>등작</strong>
+                    </h4>
+                    <ul id="tab0" class="sIndex_list tab_content active">
+                        <li>
+                            <h5>㈜강남종합건축사사무소</h5>
+                            <ul>
+                                <li>
+                                    <h6>대표자</h6>
+                                    <p>이승기</p>
+                                </li>
+                                <li>
+                                    <h6>공동참여자</h6>
+                                    <p>피엠아이건축사사무소 대표 안병호 / ㈜종합건축사사무소가람건축 대표 장연철</p>
+                                </li>
+                            </ul>
+                            <img class="winner_work" src="asset/images/winner_work0.jpg" alt="1등작_이미지" />
+                        </li>
+                        <li>
+                            <h5>
+                                <div class="icon"></div>
+                                작품설명
+                            </h5>
+                            <p>
+                                [경산대임 A-8BL]­ '알록달록 남매지이야기'라는 컨셉으로 '시간의문'에 나오는 6가지 테마중 책과 물을 모티로 
+                                하여 교육과 체험이 가득한 올인원 단지계획 ­ 책이 쌓인 형태의 중저층 특화주동 디자인을 통해 책을 특화한 
+                                단지분위기 조성 분홍꽃과 수경시설을 통해 이야기 속 분홍호수의 이미지를 구체적으로 표현함
+                            </p>
+                        </li>
+                        <li>
+                            <h5>
+                                <div class="icon"></div>
+                                도면
+                            </h5>
+                            <ul class="img_list">
+                                <li>
+                                    <img src="asset/images/plan0.jpg" alt="도면_이미지0" />
+                                </li>
+                                <li>
+                                    <img src="asset/images/plan1.jpg" alt="도면_이미지1" />
+                                </li>
+                                <li>
+                                    <img src="asset/images/plan2.jpg" alt="도면_이미지2" />
+                                </li>
+                                <li>
+                                    <img src="asset/images/plan3.jpg" alt="도면_이미지3" />
+                                </li>
+                                <li>
+                                    <img src="asset/images/plan4.jpg" alt="도면_이미지4" />
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h5>
+                                <div class="icon"></div>
+                                이미지
+                            </h5>
+                            <ul class="img_list">
+                                <li>
+                                    <img src="asset/images/winner_imgList0.jpg" alt="당선작_이미지0" />
+                                </li>
+                                <li>
+                                    <img src="asset/images/winner_imgList1.jpg" alt="당선작_이미지1" />
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul id="tab1" class="sIndex_list tab_content">
+                        <li>
+                            <h5>㈜강남종합건축사사무소</h5>
+                            <ul>
+                                <li>
+                                    <h6>대표자</h6>
+                                    <p>박효신</p>
+                                </li>
+                                <li>
+                                    <h6>공동참여자</h6>
+                                    <p>피엠아이건축사사무소 대표 안병호 / ㈜종합건축사사무소가람건축 대표 장연철</p>
+                                </li>
+                            </ul>
+                            <img class="winner_work" src="asset/images/winner_work0.jpg" alt="1등작_이미지" />
+                        </li>
+                        <li>
+                            <h5>
+                                <div class="icon"></div>
+                                작품설명
+                            </h5>
+                            <p>
+                                [경산대임 A-8BL]­ '알록달록 남매지이야기'라는 컨셉으로 '시간의문'에 나오는 6가지 테마중 책과 물을 모티로 
+                                하여 교육과 체험이 가득한 올인원 단지계획 ­ 책이 쌓인 형태의 중저층 특화주동 디자인을 통해 책을 특화한 
+                                단지분위기 조성 분홍꽃과 수경시설을 통해 이야기 속 분홍호수의 이미지를 구체적으로 표현함
+                            </p>
+                        </li>
+                        <li>
+                            <h5>
+                                <div class="icon"></div>
+                                도면
+                            </h5>
+                            <ul class="img_list">
+                                <li>
+                                    <img src="asset/images/plan0.jpg" alt="도면_이미지0" />
+                                </li>
+                                <li>
+                                    <img src="asset/images/plan1.jpg" alt="도면_이미지1" />
+                                </li>
+                                <li>
+                                    <img src="asset/images/plan2.jpg" alt="도면_이미지2" />
+                                </li>
+                                <li>
+                                    <img src="asset/images/plan3.jpg" alt="도면_이미지3" />
+                                </li>
+                                <li>
+                                    <img src="asset/images/plan4.jpg" alt="도면_이미지4" />
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h5>
+                                <div class="icon"></div>
+                                이미지
+                            </h5>
+                            <ul class="img_list">
+                                <li>
+                                    <img src="asset/images/winner_imgList0.jpg" alt="당선작_이미지0" />
+                                </li>
+                                <li>
+                                    <img src="asset/images/winner_imgList1.jpg" alt="당선작_이미지1" />
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul id="tab2" class="sIndex_list tab_content">
+                        <li>
+                            <h5>㈜강남종합건축사사무소</h5>
+                            <ul>
+                                <li>
+                                    <h6>대표자</h6>
+                                    <p>김범수</p>
+                                </li>
+                                <li>
+                                    <h6>공동참여자</h6>
+                                    <p>피엠아이건축사사무소 대표 안병호 / ㈜종합건축사사무소가람건축 대표 장연철</p>
+                                </li>
+                            </ul>
+                            <img class="winner_work" src="asset/images/winner_work0.jpg" alt="1등작_이미지" />
+                        </li>
+                        <li>
+                            <h5>
+                                <div class="icon"></div>
+                                작품설명
+                            </h5>
+                            <p>
+                                [경산대임 A-8BL]­ '알록달록 남매지이야기'라는 컨셉으로 '시간의문'에 나오는 6가지 테마중 책과 물을 모티로 
+                                하여 교육과 체험이 가득한 올인원 단지계획 ­ 책이 쌓인 형태의 중저층 특화주동 디자인을 통해 책을 특화한 
+                                단지분위기 조성 분홍꽃과 수경시설을 통해 이야기 속 분홍호수의 이미지를 구체적으로 표현함
+                            </p>
+                        </li>
+                        <li>
+                            <h5>
+                                <div class="icon"></div>
+                                도면
+                            </h5>
+                            <ul class="img_list">
+                                <li>
+                                    <img src="asset/images/plan0.jpg" alt="도면_이미지0" />
+                                </li>
+                                <li>
+                                    <img src="asset/images/plan1.jpg" alt="도면_이미지1" />
+                                </li>
+                                <li>
+                                    <img src="asset/images/plan2.jpg" alt="도면_이미지2" />
+                                </li>
+                                <li>
+                                    <img src="asset/images/plan3.jpg" alt="도면_이미지3" />
+                                </li>
+                                <li>
+                                    <img src="asset/images/plan4.jpg" alt="도면_이미지4" />
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h5>
+                                <div class="icon"></div>
+                                이미지
+                            </h5>
+                            <ul class="img_list">
+                                <li>
+                                    <img src="asset/images/winner_imgList0.jpg" alt="당선작_이미지0" />
+                                </li>
+                                <li>
+                                    <img src="asset/images/winner_imgList1.jpg" alt="당선작_이미지1" />
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- 푸터 -->
+        <footer>
+            <ul class="footer_menu">
+                <li>
+                    <a href="">개인정보처리방침</a>
+                </li>
+                <li>
+                    <a href="">이용약관</a>
+                </li>
+                <li>
+                    <a href="">홈페이지 이용문의</a>
+                </li>
+            </ul>
+            <ul class="companyInfo">
+                <li>주소 : 우)52852 경상남도 진주시 충의로 19(충무공동)</li>
+                <li>대표번호 : 1600-1004</li>
+            </ul>
+            <p class="copyright">COPYTRIGHT 2019 ⓒ BY KOREA LAND & HOUSING CORPORATION. ALL RIGHTS RESERVED.</p>
+            <select name="Family Site" id="">
+                <option value="">Family Site</option>
+            </select>
+        </footer>
+    </div>
+
+
+    <script>
+
+    </script>
+
+    <!-- j Query -->
+    <script src="asset/js/jquery-1.12.4.min.js"></script>
+
+    <!-- Main js -->
+    <script src="asset/js/main.js"></script>
+    <script>
+        scrollIndex();
+    </script>
+
+    <!-- AOS -->
+    <script src="asset/js/aos.min.js"></script>
+    <script>
+        AOS.init({
+            disable: function msieversion() {
+                var ua = window.navigator.userAgent;
+                var msie = ua.indexOf("MSIE ");
+                
+                if (msie > 0) {
+                    $("[data-aos^=fade][data-aos^=fade]").css("opacity", "1");
+                }
+            }
+        });
+    </script>
+
+    <script>
+        scrollIndex();
+
+        $(function () {
+      
+            $(window).scroll(function () {
+                let sTop = $(this).scrollTop();
+
+                if(sTop > 0) {
+                    $('.sub_page header').css('border-bottom', '1px solid #e3e3e3');
+                } else {
+                    $('.sub_page header').css('border-bottom', 'none');
+                }
+            });
+        }); 
+    </script>
+
+</body>
+</html>

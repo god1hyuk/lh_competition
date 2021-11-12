@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LH 설계공모</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="asset/images/logo/android_LH.png" />
+    <link rel="apple-touch-icon-precomposed" href="asset/images/logo/apple_LH.png" />
+    <link rel="apple-touch-icon" href="asset/images/logo/apple_LH.png" />
+    <link rel="apple-touch-startup-image" href="asset/images/logo/apple_LH.png" />
     <!-- Reset -->
     <link rel="stylesheet" href="asset/css/_reset_v7.0.4.css" />
     <!-- Common -->
@@ -14,67 +18,56 @@
     <link rel="stylesheet" href="asset/css/swiper-bundle.min.css" />
     <!-- Style -->
     <link rel="stylesheet" href="asset/css/style.css" />
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="asset/images/logo/android_LH.png" />
-    <link rel="apple-touch-icon-precomposed" href="asset/images/logo/apple_LH.png" />
-    <link rel="apple-touch-icon" href="asset/images/logo/apple_LH.png" />
-    <link rel="apple-touch-startup-image" href="asset/images/logo/apple_LH.png" />
+    <title>LH 설계공모</title>
 </head>
 <body>
 
     <!-- About Us 페이지 -->
-    <div class="intro_page">
+    <div class="aboutus_page">
         <!-- About Us 슬라이더 -->
         <div class="swiper aboutUs">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="text_wrap">
-                        <h1>2022년 LH 건축 설계공모 홈페이지가<br />새롭게 개설되었습니다.</h1>
+                        <h1>LH 건축 설계공모 홈페이지에<br />오신 것을 환영합니다.</h1>
                     </div>
                     <img src="asset/images/aboutus0.jpg" alt="AboutUs_슬라이더1" />
                 </div>
                 <div class="swiper-slide">
                     <div class="text_wrap">
-                        <h1>LH 건축 설계공모 관련정보에 대한 투명한 정보공개와<br />효율적 업무추진이 가능합니다.</h1>
-                    </div>
-                    <img src="asset/images/aboutus1.jpg" alt="AboutUs_슬라이더2" />
-                </div>
-                <div class="swiper-slide">
-                    <div class="text_wrap">
-                        <h1>LH 설계공모부터 심사결과 공개까지 공모관련<br />업무전반이 온라인으로 진행됩니다.</h1>
+                        <h1>설계공고부터 심사결과 발표까지<br />공모업무 전반이 온라인으로 진행됩니다.</h1>
                     </div>
                     <img src="asset/images/aboutus2.jpg" alt="AboutUs_슬라이더3" />
                 </div>
                 <div class="swiper-slide">
                     <div class="text_wrap">
-                        <h1>LH는 국토의 미래가치와<br />국민의 행복주거를 약속합니다.</h1>
+                        <h1>LH는 공공주택 디자인 혁신과<br />국민 주거안정을 위해 최선을 다하겠습니다.</h1>
                     </div>
                     <img src="asset/images/aboutus3.jpg" alt="AboutUs_슬라이더4" />
                 </div>
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
+            <div class="skip_wrap">
+                <button class="skip_btn" onclick="location.href='index.html'">
+                    SKIP
+                    <div class="icon_wrap">
+                        <div class="icon"></div>
+                        <div class="arrow"></div>
+                    </div>
+                </button>
+            </div>
         </div>
     </div>
 
+    <!-- Main js -->
+    <script src="asset/js/main.js"></script>
     <!-- Swiper js -->
     <script src="asset/js/swiper-bundle.min.js"></script>
     <!-- Initialize Swiper -->
     <script>
-        const aboutUsSlider = new Swiper(".aboutUs", {
-            spaceBetween: 30,
-            effect: "fade",
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-        });
+        aboutUsSlider();
     </script>
-    <!-- Main js -->
-    <!-- <script src="asset/js/main.js"></script> -->
+
 </body>
 </html>

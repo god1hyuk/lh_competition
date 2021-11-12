@@ -4,104 +4,564 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LH 설계공모</title>
-    <!-- Reset -->
-    <link rel="stylesheet" href="asset/css/_reset_v7.0.4.css" />
-    <!-- Common -->
-    <!-- Font -->
-    <link rel="stylesheet" href="asset/css/font.css" />
-    <!-- Style -->
-    <link rel="stylesheet" href="asset/css/style.css" />
     <!-- Favicon -->
     <link rel="shortcut icon" href="asset/images/logo/android_LH.png" />
     <link rel="apple-touch-icon-precomposed" href="asset/images/logo/apple_LH.png" />
     <link rel="apple-touch-icon" href="asset/images/logo/apple_LH.png" />
     <link rel="apple-touch-startup-image" href="asset/images/logo/apple_LH.png" />
-    <style>
-        a, button {
-            position: absolute;
-            background: transparent;
-        }        
-        a.home {
-            display: block;
-            top: 1.0417vw;
-            left: 1.3021vw;
-            width: 7.8125vw;
-            height: 3.6458vw;
-        }
-        button.detail {
-            top: 31.5vw;
-            left: 13.52vw;
-            width: 10.4167vw;
-            height: 3.125vw;
-        }
-        button.detailClose {
-            top: 36.25vw;
-            right: 13vw;
-            width: 3.125vw;
-            height: 3.125vw;
-        }
-        button.album {
-            top: 38.2vw;
-            right: 20.2083vw;
-            width: 5.4688vw;
-            height: 2.6042vw;
-        }
-        button.list {
-            top: 38.2vw;
-            right: 14.5833vw;
-            width: 5.4688vw;
-            height: 2.6042vw;
-        }
-    </style>
+    <!-- Reset -->
+    <link rel="stylesheet" href="asset/css/_reset_v7.0.4.css" />
+    <!-- Common -->
+    <link rel="stylesheet" href="asset/css/common.css" />
+    <!-- Font -->
+    <link rel="stylesheet" href="asset/css/font.css" />
+    <!-- AOS -->
+    <link rel="stylesheet" href="asset/css/aos.min.css" />
+    <!-- Style -->
+    <link rel="stylesheet" href="asset/css/style.css" />
+    <title>LH 설계공모</title>
 </head>
 <body>
-
-    <!-- 공모결과 페이지 -->
+    <!-- 서브페이지 새소식 -->
     <div class="winner_page sub_page">
-        <img src="asset/images/subpage_sample/winner_page_sample0.jpg" alt="공모결과페이지_샘플" />
-        <a href="index.html" class="home"></a>
-        <button class="detail"></button>
-        <button class="detailClose"></button>
-        <button class="album"></button>
-        <button class="list"></button>
+        <!-- 서브페이지 헤더 -->
+        <header data-aos="fade-down" data-aos-duration="1000">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="asset/images/logo/main_logo.png" alt="로고_이미지" />
+                </a>
+            </div>
+            <nav>
+                <ul class="main_menu">
+                    <li><a href="competition_page.html">공모소식</a></li>
+                    <li><a href="winner_page.html">공모결과</a></li>
+                    <li><a href="news_page.html">새소식</a></li>
+                    <li><a href="download.html">자료실</a></li>
+                </ul>
+            </nav>
+            <div class="nav_right">
+                <ul class="sub_menu">
+                    <li>
+                        <button class="facebook"></button>
+                    </li>
+                    <li>
+                        <button class="language">ENG</button>
+                    </li>
+                </ul>
+                <ul class="account_menu">
+                    <li>
+                        <a href="javascript:void(0);" class="login">
+                            <div class="icon"></div>
+                            로그인
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        
+        <!-- 서브페이지 타이틀 배너 -->
+        <section class="title_banner">
+            <div class="banner_left"></div>
+            <div class="banner_right" data-aos="fade-in" data-aos-duration="2000">
+                <div class="title_wrap">
+                    <div class="title">
+                        <h2>WINNER</h2>
+                        <h1>공모결과</h1>
+                    </div>
+                    <div class="descript">
+                        <p>LH 설계공모 결과를 확인<br/>하실 수 있습니다.</p>
+                    </div>
+                    <div class="icon" data-aos="fade-right" data-aos-duration="1200"></div>
+                </div>
+                <div class="title_bg"></div>
+            </div>
+            <ul class="current_page" data-aos="fade-in" data-aos-delay="300" data-aos-duration="1200">
+                <li>
+                    <a href="index.html" class="home"></a>
+                </li>
+                <img src="asset/images/icon/list_arrow.png" alt="화살표_아이콘" />
+                <li>
+                    <a href="winner_page.html">
+                        Winner
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <div class="main_content" data-aos="fade-in" data-aos-delay="500" data-aos-duration="1200">
+            <div class="awards_banner">
+                <img src="asset/images/awards_title.png" alt="어워드_타이틀" />
+                <div class="icon"></div>
+            </div>
+            <div class="search">
+                <button class="req_btn navy_btn">
+                    <div class="icon"></div>
+                    상세조건
+                </button>
+                <!-- 상세조건 -->
+                <div class="req_wrap">
+                    <ul class="subject">
+                        <li>설계 유형</li>
+                        <li>공모전 규모</li>
+                        <li>공모전 지역</li>
+                        <li>구조형식</li>
+                        <li>공모전 연도</li>
+                    </ul>
+                    <ul class="req_list">
+                        <li>
+                            <ul class="check_list">
+                                <li>
+                                    <label for="check0_0"></label>
+                                    <input type="checkbox" id="check0_0" />
+                                    공공분양
+                                </li>
+                                <li>
+                                    <label for="check0_1"></label>
+                                    <input type="checkbox" id="check0_1" />
+                                    행복주택
+                                </li>
+                                <li>
+                                    <label for="check0_2"></label>
+                                    <input type="checkbox" id="check0_2" />
+                                    국민주택
+                                </li>
+                                <li>
+                                    <label for="check0_3"></label>
+                                    <input type="checkbox" id="check0_3" />
+                                    영구임대
+                                </li>
+                                <li>
+                                    <label for="check0_4"></label>
+                                    <input type="checkbox" id="check0_4" />
+                                    통합임대
+                                </li>
+                                <li>
+                                    <label for="check0_5"></label>
+                                    <input type="checkbox" id="check0_5" />
+                                    신혼희망타운
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="check_list">
+                                <li>
+                                    <label for="check1_0"></label>
+                                    <input type="checkbox" id="check1_0" />
+                                    10억 이하
+                                </li>
+                                <li>
+                                    <label for="check1_1"></label>
+                                    <input type="checkbox" id="check1_1" />
+                                    30억 이하
+                                </li>
+                                <li>
+                                    <label for="check1_2"></label>
+                                    <input type="checkbox" id="check1_2" />
+                                    30억 초과
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="check_list">
+                                <li>
+                                    <label for="check2_0"></label>
+                                    <input type="checkbox" id="check2_0" />
+                                    전남
+                                </li>
+                                <li>
+                                    <label for="check2_1"></label>
+                                    <input type="checkbox" id="check2_1" />
+                                    제주
+                                </li>
+                                <li>
+                                    <label for="check2_2"></label>
+                                    <input type="checkbox" id="check2_2" />
+                                    경남
+                                </li>
+                                <li>
+                                    <label for="check2_3"></label>
+                                    <input type="checkbox" id="check2_3" />
+                                    강원
+                                </li>
+                                <li>
+                                    <label for="check2_4"></label>
+                                    <input type="checkbox" id="check2_4" />
+                                    경북
+                                </li>
+                                <li>
+                                    <label for="check2_5"></label>
+                                    <input type="checkbox" id="check2_5" />
+                                    부산
+                                </li>
+                                <li>
+                                    <label for="check2_6"></label>
+                                    <input type="checkbox" id="check2_6" />
+                                    광주
+                                </li>
+                                <li>
+                                    <label for="check2_7"></label>
+                                    <input type="checkbox" id="check2_7" />
+                                    전북
+                                </li>
+                                <li>
+                                    <label for="check2_8"></label>
+                                    <input type="checkbox" id="check2_8" />
+                                    울산
+                                </li>
+                                <li>
+                                    <label for="check2_9"></label>
+                                    <input type="checkbox" id="check2_9" />
+                                    대구
+                                </li>
+                                <li>
+                                    <label for="check2_10"></label>
+                                    <input type="checkbox" id="check2_10" />
+                                    충남
+                                </li>
+                                <li>
+                                    <label for="check2_11"></label>
+                                    <input type="checkbox" id="check2_11" />
+                                    서울
+                                </li>
+                                <li>
+                                    <label for="check2_12"></label>
+                                    <input type="checkbox" id="check2_12" />
+                                    경기
+                                </li>
+                                <li>
+                                    <label for="check2_13"></label>
+                                    <input type="checkbox" id="check2_13" />
+                                    충북
+                                </li>
+                                <li>
+                                    <label for="check2_14"></label>
+                                    <input type="checkbox" id="check2_14" />
+                                    대전
+                                </li>
+                                <li>
+                                    <label for="check2_15"></label>
+                                    <input type="checkbox" id="check2_15" />
+                                    인천
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="check_list">
+                                <li>
+                                    <label for="check3_0"></label>
+                                    <input type="checkbox" id="check3_0" />
+                                    벽식
+                                </li>
+                                <li>
+                                    <label for="check3_1"></label>
+                                    <input type="checkbox" id="check3_1" />
+                                    라멘
+                                </li>
+                                <li>
+                                    <label for="check3_2"></label>
+                                    <input type="checkbox" id="check3_2" />
+                                    SP
+                                </li>
+                                <li>
+                                    <label for="check3_3"></label>
+                                    <input type="checkbox" id="check3_3" />
+                                    기타
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="check_list">
+                                <li>
+                                    <label for="check4_0"></label>
+                                    <input type="checkbox" id="check4_0" />
+                                    2021년
+                                </li>
+                                <li>
+                                    <label for="check4_1"></label>
+                                    <input type="checkbox" id="check4_1" />
+                                    2020년
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button class="close_btn">
+                        <img src="asset/images/icon/blackThick_close.png" alt="닫기_아이콘" />
+                    </button>
+                </div>
+                <input type="text" placeholder="당선 업체명을 입력하세요." />
+                <input type="text" placeholder="공모전명을 입력하세요." />
+                <button class="search_btn">
+                    <img src="asset/images/icon/search_white.png" alt="검색_아이콘" />
+                    검색
+                </button>
+            </div>
+            <ul class="hash_tags">
+                <li>
+                    공공분양
+                    <button></button>
+                </li>
+                <li>
+                    10억 이하
+                    <button></button>
+                </li>
+                <li>
+                    서울
+                    <button></button>
+                </li>
+            </ul>
+            <div class="view_option">
+                <div class="input_wrap">
+                    <select name="" id="">
+                        <option value="">공모전 정렬</option>
+                    </select>
+                </div>
+                <ul class="view_mode tab_index">
+                    <li>
+                        <button class="album_btn active" data-tab="tab0">
+                            <div class="icon"></div>
+                            앨범형
+                        </button>
+                    </li>
+                    <li>
+                        <button class="list_btn" data-tab="tab1">
+                            <div class="icon"></div>
+                            목록형
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div id="tab0" class="tab_content album_type active">
+                <ul>
+                    <li>
+                        <div class="img_wrap">
+                            <img src="asset/images/winner0.jpg" alt="공모결과_리스트" />
+                        </div>
+                        <div class="title_wrap">
+                            <h3>고양성사 도시재생 혁신지구 현상설계공모</h3>
+                            <p>㈜행림종합건축사사무소</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img_wrap">
+                            <img src="asset/images/winner1.jpg" alt="공모결과_리스트" />
+                        </div>
+                        <div class="title_wrap">
+                            <h3>인천가정2 A-1블록 공동주택 현상설계 공모</h3>
+                            <p>㈜행림종합건축사사무소</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img_wrap">
+                            <img src="asset/images/winner2.jpg" alt="공모결과_리스트" />
+                        </div>
+                        <div class="title_wrap">
+                            <h3>평택고덕 A-3BL 공동주택 설계공모</h3>
+                            <p>㈜행림종합건축사사무소</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img_wrap">
+                            <img src="asset/images/winner3.jpg" alt="공모결과_리스트" />
+                        </div>
+                        <div class="title_wrap">
+                            <h3>국토지리정보원 및 익산송학 공공청사 복합개발사업</h3>
+                            <p>㈜행림종합건축사사무소</p> 
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img_wrap">
+                            <img src="asset/images/winner4.jpg" alt="공모결과_리스트" />
+                        </div>
+                        <div class="title_wrap">
+                            <h3>경산대임 A-8BL 공동주택 설계용역</h3>
+                            <p>㈜행림종합건축사사무소</p> 
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img_wrap">
+                            <img src="asset/images/winner5.jpg" alt="공모결과_리스트" />
+                        </div>
+                        <div class="title_wrap">
+                            <h3>하남교산 A11BL, A13BL 공동주택 현상설계공모</h3>
+                            <p>㈜행림종합건축사사무소</p>
+                        </div> 
+                    </li>
+                </ul>
+                <button class="more_btn">
+                    More view
+                    <div class="icon"></div>
+                </button>
+            </div>
+            <div id="tab1" class="tab_content list_type">
+                <ul>
+                    <li>
+                        <div class="img_wrap">
+                            <img src="asset/images/winner0.jpg" alt="공모결과_리스트" />
+                        </div>
+                        <div class="title_wrap">
+                            <h3>고양성사 도시재생 혁신지구 현상설계공모</h3>
+                            <p>㈜행림종합건축사사무소</p>
+                        </div>
+                        <div class="descript">
+                            <strong>공공분양</strong>
+                            <span>
+                                <img src="asset/images/icon/location.png" alt="위치_아이콘" />
+                                경기도 성남시 분당구 대장동 160
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img_wrap">
+                            <img src="asset/images/winner1.jpg" alt="공모결과_리스트" />
+                        </div>
+                        <div class="title_wrap">
+                            <h3>인천가정2 A-1블록 공동주택 현상설계 공모</h3>
+                            <p>㈜행림종합건축사사무소</p>
+                        </div>
+                        <div class="descript">
+                            <strong>청년주택</strong>
+                            <span>
+                                <img src="asset/images/icon/location.png" alt="위치_아이콘" />
+                                경기도 성남시 분당구 대장동 160
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img_wrap">
+                            <img src="asset/images/winner2.jpg" alt="공모결과_리스트" />
+                        </div>
+                        <div class="title_wrap">
+                            <h3>평택고덕 A-3BL 공동주택 설계공모</h3>
+                            <p>㈜행림종합건축사사무소</p>
+                        </div>
+                        <div class="descript">
+                            <strong>장기임대</strong>
+                            <span>
+                                <img src="asset/images/icon/location.png" alt="위치_아이콘" />
+                                경기도 성남시 분당구 대장동 160
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img_wrap">
+                            <img src="asset/images/winner3.jpg" alt="공모결과_리스트" />
+                        </div>
+                        <div class="title_wrap">
+                            <h3>국토지리정보원 및 익산송학 공공청사 복합개발사업</h3>
+                            <p>㈜행림종합건축사사무소</p>
+                        </div>
+                        <div class="descript">
+                            <strong>장기임대</strong>
+                            <span>
+                                <img src="asset/images/icon/location.png" alt="위치_아이콘" />
+                                경기도 성남시 분당구 대장동 160
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img_wrap">
+                            <img src="asset/images/winner4.jpg" alt="공모결과_리스트" />
+                        </div>
+                        <div class="title_wrap">
+                            <h3>경산대임 A-8BL 공동주택 설계용역</h3>
+                            <p>㈜행림종합건축사사무소</p>
+                        </div>
+                        <div class="descript">
+                            <strong>장기임대</strong>
+                            <span>
+                                <img src="asset/images/icon/location.png" alt="위치_아이콘" />
+                                경기도 성남시 분당구 대장동 160
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img_wrap">
+                            <img src="asset/images/winner5.jpg" alt="공모결과_리스트" />
+                        </div>
+                        <div class="title_wrap">
+                            <h3>하남교산 A11BL, A13BL 공동주택 현상설계공모</h3>
+                            <p>㈜행림종합건축사사무소</p>
+                        </div>
+                        <div class="descript">
+                            <strong>장기임대</strong>
+                            <span>
+                                <img src="asset/images/icon/location.png" alt="위치_아이콘" />
+                                경기도 성남시 분당구 대장동 160
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+                <button class="more_btn">
+                    More view
+                    <div class="icon"></div>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 푸터 -->
+        <footer>
+            <ul class="footer_menu">
+                <li>
+                    <a href="">개인정보처리방침</a>
+                </li>
+                <li>
+                    <a href="">이용약관</a>
+                </li>
+                <li>
+                    <a href="">홈페이지 이용문의</a>
+                </li>
+            </ul>
+            <ul class="companyInfo">
+                <li>주소 : 우)52852 경상남도 진주시 충의로 19(충무공동)</li>
+                <li>대표번호 : 1600-1004</li>
+            </ul>
+            <p class="copyright">COPYTRIGHT 2019 ⓒ BY KOREA LAND & HOUSING CORPORATION. ALL RIGHTS RESERVED.</p>
+            <select name="Family Site" id="">
+                <option value="">Family Site</option>
+            </select>
+        </footer>
     </div>
 
-    <!-- Main js -->
-    <!-- <script src="asset/js/main.js"></script> -->
 
     <script>
-        const detailBtn = document.querySelector('button.detail');
-        const detailCloseBtn = document.querySelector('button.detailClose');
-        const albumBtn = document.querySelector('button.album');
-        const listBtn = document.querySelector('button.list');
-        const pageSample = document.querySelector('.sub_page img');
-        detailCloseBtn.style.display = 'none';
 
-        albumBtn.addEventListener('click', () => {
-            albumBtn.style.top = '38.2vw';
-            listBtn.style.top = '38.2vw';
-            pageSample.src = 'asset/images/subpage_sample/winner_page_sample0.jpg';
-        });
-        listBtn.addEventListener('click', () => {
-            albumBtn.style.top = '38.2vw';
-            listBtn.style.top = '38.2vw';
-            pageSample.src = 'asset/images/subpage_sample/winner_page_sample3.jpg';
-        });
-        detailBtn.addEventListener('click', () => {
-            albumBtn.style.display = 'none';
-            listBtn.style.display = 'none';
-            detailCloseBtn.style.display = 'block';
-            pageSample.src = 'asset/images/subpage_sample/winner_page_sample1.jpg';
-        });
-        detailCloseBtn.addEventListener('click', () => {
-            albumBtn.style.display = 'block';
-            listBtn.style.display = 'block';
-            albumBtn.style.top = '45.5vw';
-            listBtn.style.top = '45.5vw';
-            detailCloseBtn.style.display = 'none';
-            pageSample.src = 'asset/images/subpage_sample/winner_page_sample2.jpg';
+    </script>
+
+    <!-- j Query -->
+    <script src="asset/js/jquery-1.12.4.min.js"></script>
+
+    <!-- Main js -->
+    <script src="asset/js/main.js"></script>
+
+    <!-- AOS -->
+    <script src="asset/js/aos.min.js"></script>
+    <script>
+        AOS.init({
+            disable: function msieversion() {
+                var ua = window.navigator.userAgent;
+                var msie = ua.indexOf("MSIE ");
+                
+                if (msie > 0) {
+                    $("[data-aos^=fade][data-aos^=fade]").css("opacity", "1");
+                }
+            }
         });
     </script>
+
+    <script>
+        $(function () {
+      
+            $(window).scroll(function () {
+                let sTop = $(this).scrollTop();
+
+                if(sTop > 0) {
+                    $('.sub_page header').css('border-bottom', '1px solid #e3e3e3');
+                } else {
+                    $('.sub_page header').css('border-bottom', 'none');
+                }
+            });
+        });
+    </script> 
+
 </body>
 </html>

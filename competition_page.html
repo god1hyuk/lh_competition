@@ -4,122 +4,413 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LH 설계공모</title>
-    <!-- Reset -->
-    <link rel="stylesheet" href="asset/css/_reset_v7.0.4.css" />
-    <!-- Common -->
-    <!-- Font -->
-    <link rel="stylesheet" href="asset/css/font.css" />
-    <!-- Style -->
-    <link rel="stylesheet" href="asset/css/style.css" />
     <!-- Favicon -->
     <link rel="shortcut icon" href="asset/images/logo/android_LH.png" />
     <link rel="apple-touch-icon-precomposed" href="asset/images/logo/apple_LH.png" />
     <link rel="apple-touch-icon" href="asset/images/logo/apple_LH.png" />
     <link rel="apple-touch-startup-image" href="asset/images/logo/apple_LH.png" />
-    <style>
-        
-        a, button {
-            position: absolute;
-            background: transparent;
-        }
-        a.home {
-            display: block;
-            top: 1.0417vw;
-            left: 1.3021vw;
-            width: 7.8125vw;
-            height: 3.6458vw;
-        }
-        button.album {
-            top: 25vw;
-            right: 20.2083vw;
-            width: 5.4688vw;
-            height: 2.6042vw;
-        }
-        button.list {
-            top: 25vw;
-            right: 14.5833vw;
-            width: 5.4688vw;
-            height: 2.6042vw;
-        }
-        button.info_album {
-            top: 32.8125vw;
-            left: 13.5417vw;
-            width: 16.6667vw;
-            height: 15.1042vw;
-        }
-        button.info_list {
-            top: 32.8125vw;
-            left: 13.5417vw;
-            width: 72.9167vw;
-            height: 4.6875vw;
-        }
-        button.viewList {
-            top: 24.9vw;
-            right: 13.5vw;
-            width: 7vw;
-            height: 2.5vw;
-        }
-    </style>
+    <!-- Reset -->
+    <link rel="stylesheet" href="asset/css/_reset_v7.0.4.css" />
+    <!-- Common -->
+    <link rel="stylesheet" href="asset/css/common.css" />
+    <!-- Font -->
+    <link rel="stylesheet" href="asset/css/font.css" />
+    <!-- AOS -->
+    <link rel="stylesheet" href="asset/css/aos.min.css" />
+    <!-- Style -->
+    <link rel="stylesheet" href="asset/css/style.css" />
+    <title>LH 설계공모</title>
 </head>
 <body>
-
-    <!-- 공모소식 페이지 -->
+    <!-- 서브페이지 공모소식 -->
     <div class="competition_page sub_page">
-        <img src="asset/images/subpage_sample/competition_page_sample0.jpg" alt="공모소식페이지_샘플" />
-        <a href="index.html" class="home"></a>
-        <button class="album"></button>
-        <button class="list"></button>
-        <button class="info_album"></button>
-        <button class="info_list"></button>
-        <button class="viewList"></button>
+        <!-- 서브페이지 헤더 -->
+        <header data-aos="fade-down" data-aos-duration="1000">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="asset/images/logo/main_logo.png" alt="로고_이미지" />
+                </a>
+            </div>
+            <nav>
+                <ul class="main_menu">
+                    <li><a href="competition_page.html">공모소식</a></li>
+                    <li><a href="winner_page.html">공모결과</a></li>
+                    <li><a href="news_page.html">새소식</a></li>
+                    <li><a href="download.html">자료실</a></li>
+                </ul>
+            </nav>
+            <div class="nav_right">
+                <ul class="sub_menu">
+                    <li>
+                        <button class="facebook"></button>
+                    </li>
+                    <li>
+                        <button class="language">ENG</button>
+                    </li>
+                </ul>
+                <ul class="account_menu">
+                    <li>
+                        <a href="javascript:void(0);" class="login">
+                            <div class="icon"></div>
+                            로그인
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <!-- 서브페이지 타이틀 배너 -->
+        <section class="title_banner">
+            <div class="banner_left"></div>
+            <div class="banner_right" data-aos="fade-in" data-aos-duration="2000">
+                <div class="title_wrap">
+                    <div class="title">
+                        <h2>COMPETITION</h2>
+                        <h1>공모소식</h1>
+                    </div>
+                    <div class="descript">
+                        <p>LH 설계공모 소식과 신청을<br/>하실 수 있습니다.</p>
+                    </div>
+                    <div class="icon" data-aos="fade-right" data-aos-duration="1200"></div>
+                </div>
+                <div class="title_bg"></div>
+            </div>
+            <ul class="current_page" data-aos="fade-in" data-aos-delay="300" data-aos-duration="1200">
+                <li>
+                    <a href="index.html" class="home"></a>
+                </li>
+                <img src="asset/images/icon/list_arrow.png" alt="화살표_아이콘" />
+                <li>
+                    <a href="competition_page.html">
+                        Competition
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <div class="main_content" data-aos="fade-in" data-aos-delay="500" data-aos-duration="1200">
+            <div class="view_option">
+                <div class="input_wrap">
+                    <select name="" id="">
+                        <option value="">공모지역</option>
+                    </select>
+                    <select name="" id="">
+                        <option value="">마감순</option>
+                    </select>
+                    <div class="search">
+                        <input type="text" placeholder="제목을 입력하세요." />
+                        <button class="search_btn">
+                            <img src="asset/images/icon/search_white.png" alt="검색_아이콘" />
+                            검색
+                        </button>
+                    </div>
+                </div>
+                <ul class="view_mode tab_index">
+                    <li>
+                        <button class="album_btn active" data-tab="tab0">
+                            <div class="icon"></div>
+                            앨범형
+                        </button>
+                    </li>
+                    <li>
+                        <button class="list_btn" data-tab="tab1">
+                            <div class="icon"></div>
+                            목록형
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div id="tab0" class="tab_content album_type active" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+                <ul>
+                    <li>
+                        <div class="title_wrap">
+                            <div class="subject">
+                                <div class="flag">
+                                    <p>응모신청 진행중</p>
+                                </div>
+                                <strong>공공분양</strong>
+                            </div>
+                            <h3>하남교산 A11BL, A13BL 공동주택 현상설계공모</h3>
+                        </div>
+                        <div class="deadline">
+                            <span>마감시간</span>
+                            <p>2021-08-26 00:00시 마감</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title_wrap">
+                            <div class="subject">
+                                <div class="flag">
+                                    <p>응모신청 마감</p>
+                                </div>
+                                <strong>청년주택</strong>
+                            </div>
+                            <h3>고양성사 도시재생 혁신지구 설계공모</h3>
+                        </div>
+                        <div class="deadline">
+                            <span>응모신청</span>
+                            <p>2021-08-12 ~ 2021-08-26</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title_wrap">
+                            <div class="subject">
+                                <div class="flag">
+                                    <p>작품제출 진행중</p>
+                                </div>
+                                <strong>장기임대</strong>
+                            </div>
+                            <h3>인천가정2 A-1블록 공동주택 현상설계 공모</h3>
+                        </div>
+                        <div class="deadline">
+                            <span>마감시간</span>
+                            <p>2021-08-26 00:00시 마감</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title_wrap">
+                            <div class="subject">
+                                <div class="flag">
+                                    <p>작품제출 마감</p>
+                                </div>
+                                <strong>장기임대</strong>
+                            </div>
+                            <h3>평택고덕 A-3BL 공동주택 설계공모</h3>
+                        </div>
+                        <div class="deadline">
+                            <span>작품제출</span>
+                            <p>2021-08-12 ~ 2021-08-26</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title_wrap">
+                            <div class="subject">
+                                <div class="flag">
+                                    <p>응모신청 마감</p>
+                                </div>
+                                <strong>청년주택</strong>
+                            </div>
+                            <h3>한남대 캠퍼스 혁신파크 HUB동 건축설계용역 현상설계 공...</h3>
+                        </div>
+                        <div class="deadline">
+                            <span>마감시간</span>
+                            <p>2021-08-12 ~ 2021-08-26</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title_wrap">
+                            <div class="subject">
+                                <div class="flag">
+                                    <p>작품제출 진행중</p>
+                                </div>
+                                <strong>공공분양</strong>
+                            </div>
+                            <h3>국토지리정보원 및 익산송학 공공청사 복합개발사업</h3>
+                        </div>
+                        <div class="deadline">
+                            <span>마감시간</span>
+                            <p>2021-08-26 00:00시 마감</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title_wrap">
+                            <div class="subject">
+                                <div class="flag">
+                                    <p>작품제출 마감</p>
+                                </div>
+                                <strong>장기임대</strong>
+                            </div>
+                            <h3>경산대임 A-8BL 공동주택 설계용역</h3>
+                        </div>
+                        <div class="deadline">
+                            <span>작품제출</span>
+                            <p>2021-08-12 ~ 2021-08-26</p>
+                        </div>
+                    </li>
+                </ul>
+                <button class="more_btn">
+                    More view
+                    <div class="icon"></div>
+                </button>
+            </div>
+            <div id="tab1" class="tab_content list_type">
+                <ul>
+                    <li>
+                        <div class="title_wrap">
+                            <div class="subject">
+                                <div class="flag">
+                                    <p>응모신청 진행중</p>
+                                </div>
+                                <h3>하남교산 A11BL, A13BL 공동주택 현상설계공모</h3>
+                            </div>
+                        </div>
+                        <div class="deadline">
+                            <strong>공공분양</strong>
+                            <span>마감시간</span>
+                            <p>2021-08-26 00:00시 마감</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title_wrap">
+                            <div class="subject">
+                                <div class="flag">
+                                    <p>응모신청 마감</p>
+                                </div>
+                                <h3>고양성사 도시재생 혁신지구 설계공모</h3>
+                            </div>
+                        </div>
+                        <div class="deadline">
+                            <strong>청년주택</strong>
+                            <span>응모신청</span>
+                            <p>2021-08-12 ~ 2021-08-26</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title_wrap">
+                            <div class="subject">
+                                <div class="flag">
+                                    <p>작품제출 진행중</p>
+                                </div>
+                                <h3>인천가정2 A-1블록 공동주택 현상설계 공모</h3>
+                            </div>
+                        </div>
+                        <div class="deadline">
+                            <strong>장기임대</strong>
+                            <span>마감시간</span>
+                            <p>2021-08-26 00:00시 마감</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title_wrap">
+                            <div class="subject">
+                                <div class="flag">
+                                    <p>작품제출 마감</p>
+                                </div>
+                                <h3>평택고덕 A-3BL 공동주택 설계공모</h3>
+                            </div>
+                        </div>
+                        <div class="deadline">
+                            <strong>장기임대</strong>
+                            <span>작품제출</span>
+                            <p>2021-08-12 ~ 2021-08-26</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title_wrap">
+                            <div class="subject">
+                                <div class="flag">
+                                    <p>응모신청 마감</p>
+                                </div>
+                                <h3>한남대 캠퍼스 혁신파크 HUB동 건축설계용역 현상설계 공...</h3>
+                            </div>
+                        </div>
+                        <div class="deadline">
+                            <strong>청년주택</strong>
+                            <span>마감시간</span>
+                            <p>2021-08-12 ~ 2021-08-26</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title_wrap">
+                            <div class="subject">
+                                <div class="flag">
+                                    <p>작품제출 진행중</p>
+                                </div>
+                                <h3>국토지리정보원 및 익산송학 공공청사 복합개발사업</h3>
+                            </div>
+                        </div>
+                        <div class="deadline">
+                            <strong>공공분양</strong>
+                            <span>마감시간</span>
+                            <p>2021-08-26 00:00시 마감</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title_wrap">
+                            <div class="subject">
+                                <div class="flag">
+                                    <p>작품제출 마감</p>
+                                </div>
+                                <h3>경산대임 A-8BL 공동주택 설계용역</h3>
+                            </div>
+                        </div>
+                        <div class="deadline">
+                            <strong>장기임대</strong>
+                            <span>작품제출</span>
+                            <p>2021-08-12 ~ 2021-08-26</p>
+                        </div>
+                    </li>
+                </ul>
+                <button class="more_btn">
+                    More view
+                    <div class="icon"></div>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 푸터 -->
+        <footer>
+            <ul class="footer_menu">
+                <li>
+                    <a href="">개인정보처리방침</a>
+                </li>
+                <li>
+                    <a href="">이용약관</a>
+                </li>
+                <li>
+                    <a href="">홈페이지 이용문의</a>
+                </li>
+            </ul>
+            <ul class="companyInfo">
+                <li>주소 : 우)52852 경상남도 진주시 충의로 19(충무공동)</li>
+                <li>대표번호 : 1600-1004</li>
+            </ul>
+            <p class="copyright">COPYTRIGHT 2019 ⓒ BY KOREA LAND & HOUSING CORPORATION. ALL RIGHTS RESERVED.</p>
+            <select name="Family Site" id="">
+                <option value="">Family Site</option>
+            </select>
+        </footer>
     </div>
 
-    <!-- Main js -->
-    <!-- <script src="asset/js/main.js"></script> -->
 
     <script>
-        const albumBtn = document.querySelector('button.album');
-        const listBtn = document.querySelector('button.list');
-        const infoAlbumBtn = document.querySelector('button.info_album');
-        const infoListBtn = document.querySelector('button.info_list');
-        const viewListBtn = document.querySelector('button.viewList');
-        const pageSample = document.querySelector('.sub_page img');
-        infoListBtn.style.display = 'none';
-        viewListBtn.style.display = 'none';
 
-        albumBtn.addEventListener('click', () => {
-            infoAlbumBtn.style.display = 'block';
-            infoListBtn.style.display = 'none';
-            pageSample.src = 'asset/images/subpage_sample/competition_page_sample0.jpg';
+    </script>
+
+    <!-- j Query -->
+    <script src="asset/js/jquery-1.12.4.min.js"></script>
+
+    <!-- Main js -->
+    <script src="asset/js/main.js"></script>
+
+    <!-- AOS -->
+    <script src="asset/js/aos.min.js"></script>
+    <script>
+        AOS.init({
+            disable: function msieversion() {
+                var ua = window.navigator.userAgent;
+                var msie = ua.indexOf("MSIE ");
+                
+                if (msie > 0) {
+                    $("[data-aos^=fade][data-aos^=fade]").css("opacity", "1");
+                }
+            }
         });
-        listBtn.addEventListener('click', () => {
-            infoAlbumBtn.style.display = 'none';
-            infoListBtn.style.display = 'block';
-            pageSample.src = 'asset/images/subpage_sample/competition_page_sample1.jpg';
+    </script>
+
+    <script>
+        $(function () {
+      
+            $(window).scroll(function () {
+                let sTop = $(this).scrollTop();
+                console.log(sTop);
+
+                if(sTop > 0) {
+                    $('.sub_page header').css('border-bottom', '1px solid #e3e3e3');
+                } else {
+                    $('.sub_page header').css('border-bottom', 'none');
+                }
+            });
         });
-        infoAlbumBtn.addEventListener('click', () => {
-            pageSample.src = 'asset/images/subpage_sample/competition_page_sample2.jpg';
-            infoAlbumBtn.style.display = 'none';
-            albumBtn.style.display = 'none';
-            listBtn.style.display = 'none';
-            viewListBtn.style.display = 'block';
-        });
-        infoListBtn.addEventListener('click', () => {
-            pageSample.src = 'asset/images/subpage_sample/competition_page_sample2.jpg';
-            infoListBtn.style.display = 'none';
-            albumBtn.style.display = 'none';
-            listBtn.style.display = 'none';
-            viewListBtn.style.display = 'block';
-        });
-        viewListBtn.addEventListener('click', () => {
-            pageSample.src = 'asset/images/subpage_sample/competition_page_sample0.jpg';
-            listBtn.style.display = 'block';
-            albumBtn.style.display = 'block';
-            infoAlbumBtn.style.display = 'block';
-            viewListBtn.style.display = 'none';
-        });
-        
     </script>
 
 </body>
